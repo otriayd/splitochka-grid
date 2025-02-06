@@ -1,0 +1,53 @@
+.logo-block {
+	display: grid;
+
+	&:has(.logo-block__description) {
+		grid-template-rows: auto #{rem(20)} auto;
+		grid-template-areas: "logo"
+			"."
+			"description";
+	}
+
+	&__description {
+		grid-area: description;
+		@include fluid-text(12, 12);
+		max-width: 190px;
+		line-height: 100%;
+
+		&_light {
+			color: var(--text-color-maxlight);
+		}
+	}
+
+	&__logo {
+		grid-area: logo;
+		justify-self: start;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	min-height: #{rem(40)};
+	padding-inline: 20px;
+	border-radius: var(--border-radius_min);
+	border-width: 1px;
+	border-style: solid;
+	font-family: var(--font-family-decorative-bold), sans-serif;
+
+	@include fluid-text(20, 14);
+
+	&_light {
+		color: var(--text-color-maxlight);
+		border-color: var(--text-color-maxlight);
+	}
+
+	&_dark {
+		color: var(--text-color-base);
+		border-color: var(--border-color-dark);
+
+		@include hover {
+			border-color: var(--hover-color);
+		}
+	}
+}

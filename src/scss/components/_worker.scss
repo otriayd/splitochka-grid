@@ -1,0 +1,62 @@
+.worker {
+	display: grid;
+	grid-template-columns: 10px 1fr 10px;
+	grid-template-rows: #{rem(10)} auto #{rem(20)} auto #{rem(10)};
+	grid-template-areas: ". . ."
+		". link ."
+		". . ."
+		". phone ."
+		". . .";
+	transition: border var(--transition-duration) ease;
+
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
+
+	@include hover {
+		border: 1px solid var(--text-color-base);
+	}
+
+	&__link {
+		grid-area: link;
+		display: grid;
+		grid-template-rows: auto #{rem(20)} auto #{rem(10)} auto #{rem(15)} auto;
+		grid-template-areas: "pic"
+			"."
+			"title"
+			"."
+			"name"
+			"."
+			"rating";
+	}
+
+	&__pic {
+		grid-area: pic;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__title {
+		grid-area: title;
+		@include fluid-text(14, 12);
+	}
+
+	&__name {
+		grid-area: name;
+		@include fluid-text(18, 14);
+	}
+
+	&__rating-result {
+		grid-area: rating;
+		display: flex;
+		flex-wrap: wrap;
+		@include fluid-text(14, 14);
+	}
+
+	&__phone {
+		grid-area: phone;
+	}
+}

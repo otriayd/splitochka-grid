@@ -1,0 +1,16 @@
+.action-button {
+	display: flex !important;
+	justify-content: center;
+	padding: #{rem(15)} #{rem(20)} !important;
+	@include fluid-text(14, 12);
+	font-family: var(--font-family-base-medium);
+	border-radius: var(--border-radius_min) !important;
+	background-color: var(--accent-button-color) !important;
+	color: var(--text-color-maxlight) !important;
+	line-height: 100% !important;
+	white-space: nowrap;
+
+	@include hover {
+		background-color: var(--accent-color) !important;
+	}
+}

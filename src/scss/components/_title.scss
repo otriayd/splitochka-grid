@@ -1,0 +1,28 @@
+.title {
+	font-family: var(--font-family-base-bold);
+	line-height: 100%;
+
+	&_big {
+		@include fluid-text(38, 28);
+	}
+
+	&_h1 {
+		@include fluid-text(32, 28);
+	}
+
+	&_h2 {
+		@include fluid-text(28, 24);
+	}
+
+	&_h3 {
+		@include fluid-text(18, 16);
+	}
+
+	&_h4 {
+		@include fluid-text(14, 14);
+	}
+
+	&_accent {
+		color: var(--accent-button-color);
+	}
+}

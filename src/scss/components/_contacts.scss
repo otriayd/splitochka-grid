@@ -1,0 +1,27 @@
+.contacts {
+	display: grid;
+	justify-items: start;
+	gap: 20px;
+
+	&_light {
+		color: var(--text-color-minlight);
+	}
+
+	&__item {
+		&:hover {
+			.icon {
+				filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.2));
+			}
+
+			.contacts__item-link {
+				color: var(--text-color-maxlight);
+			}
+		}
+	}
+
+	&__item-link {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+	}
+}

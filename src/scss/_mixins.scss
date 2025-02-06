@@ -1,0 +1,72 @@
+@use 'sass:math';
+
+@mixin fluid-text($max: 48, $min: 16) {
+	$maxViewportWidth: 1400;
+	$minViewportWidth: 360;
+
+	$maxSize: math.div($max, 16);
+	$minSize: math.div($min, 16);
+	$maxWidth: math.div($maxViewportWidth, 16);
+	$minWidth: math.div($minViewportWidth, 16);
+
+	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+	$yAxisIntersection: -$minWidth * $slope + $minSize;
+
+	font-size: clamp(#{$minSize * 1rem},
+		#{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+		#{$maxSize * 1rem});
+}
+
+@function rem($pixel) {
+	@if math.is-unitless($pixel) {
+		@return math.div($pixel, 16)+rem;
+	}
+
+	@else {
+		@error 'Передаём только цифры';
+	}
+}
+
+@mixin marker-inden($max: 32, $min: 20) {
+	--marker-inden: clamp(#{$min}px, #{calc($max / 1880 * 100)}vw, #{$max}px);
+}
+
+@mixin reset-link {
+	color: inherit;
+
+	&,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin reset-button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+@mixin flex-center($isInline: false) {
+	@if $isInline {
+		display: inline-flex;
+	}
+
+	@else {
+		display: flex;
+	}
+
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin abs-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+@mixin square($size) {
+	width: $size;
+	aspect-ratio: 1;
+}

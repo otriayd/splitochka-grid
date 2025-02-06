@@ -1,0 +1,9 @@
+.privacy-page {
+	&__text-list {
+		margin-top: #{rem(40)};
+	}
+
+	&__numbered-text {
+		margin-top: #{rem(20)};
+	}
+}

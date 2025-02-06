@@ -1,0 +1,54 @@
+.aside-link {
+	display: grid;
+	background-color: #fff;
+	grid-template-rows: #{rem(20)} 1fr #{rem(20)};
+	grid-template-columns: 10px 1fr 40px 15px 230px 20px;
+	align-items: center;
+	height: 100%;
+
+	@include hover {
+		.aside-link__icon {
+			background-color: var(--hover-color-light);
+		}
+
+		.aside-link__title {
+			color: var(--text-hover-color);
+		}
+	}
+
+	&_w-icon {
+		grid-template-areas: ". . . . . ."
+			". . icon . title ."
+			". . . . . .";
+	}
+
+	&_simple {
+		grid-template-areas: ". . . . . ."
+			". . title title title ."
+			". . . . . .";
+	}
+
+	&__icon {
+		grid-area: icon;
+		transition: border-color 0.1s ease-out;
+		border: 1px solid transparent;
+	}
+
+	&__title {
+		grid-area: title;
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		@include fluid-text(14, 14);
+		transition: color var(--transition-duration) ease;
+		font-family: var(--font-family-base-medium);
+
+		&-icon {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+
+
+}

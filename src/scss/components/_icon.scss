@@ -1,0 +1,54 @@
+.icon {
+	display: flex;
+	align-items: center;
+	border-radius: var(--border-radius_mid);
+	line-height: 100%;
+	transition: background-color var(--transition-duration) ease, border var(--transition-duration) ease;
+
+	&_squire {
+		aspect-ratio: 1/1;
+		justify-content: center;
+
+		&-max {
+			width: #{rem(60)};
+		}
+
+		&-min {
+			width: #{rem(40)};
+		}
+	}
+
+	&__svg {
+		path {
+			fill: #000;
+		}
+
+		&_reverse {
+			fill: #F1F1F1;
+		}
+
+		&_min {
+			width: #{rem(20)};
+			height: #{rem(20)};
+		}
+
+		&_max {
+			width: #{rem(40)};
+			height: #{rem(40)};
+		}
+	}
+
+	&_w-border {
+		border: 1px solid var(--border-color-dark);
+
+		@include hover {
+			border: 1px solid var(--hover-color);
+		}
+	}
+
+	&_w-bg {
+		background-color: var(--bg-light-color);
+
+
+	}
+}

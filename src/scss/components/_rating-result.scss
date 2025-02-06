@@ -1,0 +1,30 @@
+.rating-result {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 20px;
+	position: relative;
+	isolation: isolate;
+
+	&::before {
+		display: flex;
+		content: "★★★★★";
+		font-size: 24px;
+		line-height: 1;
+		color: var(--bg-main-color);
+	}
+}
+
+.rating-result__list {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.rating-result__item {
+	font-size: 24px;
+	line-height: 1;
+	color: var(--theme-color);
+}

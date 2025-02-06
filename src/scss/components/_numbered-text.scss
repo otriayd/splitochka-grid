@@ -1,0 +1,72 @@
+.privacy-page__numbered-text {}
+
+.numbered-text {
+	grid-area: list;
+	counter-reset: section-text;
+	list-style-type: none;
+}
+
+.numbered-text__item {
+	display: grid;
+	grid-template-columns: auto 30px 1fr;
+
+	&::before {
+		grid-area: number;
+		counter-increment: section-text;
+		content: counters(section-text, ".") ".";
+		@include fluid-text(18, 16);
+		font-family: var(--font-family-base-bold);
+	}
+
+	&_has-sub {
+		&+& {
+			margin-top: #{rem(30)};
+		}
+
+		&:has(.numbered-text__item-title) {}
+
+		grid-template-rows: auto #{rem(30)} auto;
+		grid-template-areas: "number . title"
+		". . ."
+		"list list list";
+	}
+
+	&_simple {
+		grid-template-areas: "number . content";
+
+		&+& {
+			margin-top: #{rem(20)};
+		}
+
+		&+.numbered-text__item_has-sub-simple {
+			margin-top: #{rem(20)};
+		}
+	}
+
+	&_has-sub-simple {
+		grid-template-rows: auto #{rem(20)} auto;
+		grid-template-areas: "number . content"
+			". . ."
+			". . list";
+
+		&+.numbered-text__item_simple {
+			margin-top: #{rem(20)};
+		}
+	}
+
+	&_lvl-1 {
+		&+& {
+			margin-top: #{rem(50)}
+		}
+	}
+}
+
+
+
+.numbered-text__item-title {
+	grid-area: title;
+}
+
+.numbered-text__item-content {
+	grid-area: content;
+}

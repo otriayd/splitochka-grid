@@ -1,0 +1,90 @@
+.footer {
+	container-type: inline-size;
+	display: grid;
+	grid-template-columns: 30px 1fr 30px;
+	grid-template-rows: #{rem(100)} auto #{rem(30)} auto #{rem(60)} auto #{rem(40)} auto #{rem(40)} auto #{rem(30)} auto #{rem(100)};
+	grid-template-areas: ". . ."
+		". logo ."
+		". . ."
+		". nav ."
+		". . ."
+		". additional ."
+		". . ."
+		". contacts ."
+		". . ."
+		". social ."
+		". . ."
+		". copyright ."
+		". . .";
+
+	@container (min-width: 780px) {
+		grid-template-columns: 30px 1fr minmax(200px, auto) 1fr 30px;
+		grid-template-areas: ". . . . ."
+			". . logo . ."
+			". . . . ."
+			". . nav . ."
+			". . . . ."
+			". . additional . ."
+			". . . . ."
+			". . contacts . ."
+			". . . . ."
+			". . social . ."
+			". . . . ."
+			". . copyright . ."
+			". . . . .";
+	}
+
+	@include tablet-above {
+		grid-template-columns: 10px 1fr minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(auto, 365px) 1fr 10px;
+		grid-template-rows: #{rem(80)} auto #{rem(60)} auto #{rem(40)} 1fr auto #{rem(40)} auto #{rem(80)};
+		grid-template-areas: ". . . . . . . . . . . ."
+			". . logo . . nav nav nav . contacts . ."
+			". . logo . . . . . . contacts . ."
+			". . logo . . additional additional additional . contacts . ."
+			". . logo . . additional additional additional . . . ."
+			". . logo . . additional additional additional . social . ."
+			". . . . . additional additional additional . . . ."
+			". . . . . . . . . . . ."
+			". . . . . copyright copyright copyright . . . ."
+			". . . . . . . . . . . .";
+		align-items: start;
+	}
+
+	&_dark {
+		background-color: var(--bg-dark-color);
+	}
+
+	&__logo-block {
+		grid-area: logo;
+	}
+
+	&__footer-nav {
+		grid-area: nav;
+	}
+
+	&__additional {
+		grid-area: additional;
+	}
+
+	&__contacts {
+		grid-area: contacts;
+	}
+
+	&__social {
+		grid-area: social;
+	}
+
+	&__copyright {
+		grid-area: copyright;
+	}
+}
+
+@import "../components/footer-nav";
+
+@import "../components/_additional";
+
+@import "../components/_contacts";
+
+@import "../components/_social";
+
+@import "../components/_copyright";

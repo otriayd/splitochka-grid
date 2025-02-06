@@ -1,0 +1,60 @@
+.aside__product-filter-container {
+	height: 100%;
+}
+
+.product-filter {
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 10px 1fr 40px 15px 230px 20px;
+	grid-template-rows: #{rem(80)} auto #{rem(40)} auto;
+	grid-template-areas: ". . . . . ."
+		". . title title title ."
+		". . . . . ."
+		". . form form form .";
+}
+
+.product-filter__title {
+	grid-area: title;
+	@include fluid-text(18, 16);
+}
+
+.product-filter__form {
+	grid-area: form;
+
+}
+
+.product-filter__form-set {
+	display: grid;
+
+	&+.product-filter__form-set {
+		margin-top: #{rem(30)};
+	}
+}
+
+.product-filter__form-set-title {
+	margin-bottom: #{rem(10)}
+}
+
+.product-filter__form-set-label {
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+	justify-content: flex-start;
+	justify-self: start;
+}
+
+.product-filter__form-set-input {
+	cursor: pointer;
+	accent-color: var(--bg-main-color);
+	border-radius: var(--border-radius_min);
+	overflow: hidden;
+
+	&_checkbox {
+		width: #{rem(20)};
+		height:#{rem(20)};
+	}
+}
+
+.product-filter__form-set-label-title {}

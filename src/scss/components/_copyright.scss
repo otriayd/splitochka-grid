@@ -1,0 +1,7 @@
+.copyright {
+	@include fluid-text(14, 14);
+
+	&_light {
+		color: var(--text-color-minlight);
+	}
+}

@@ -1,0 +1,13 @@
+.breakdowns-page {
+	&__advantages-container {
+		margin-top: #{rem(50)};
+
+		@include tablet-above {
+			margin-top: #{rem(100)};
+		}
+	}
+
+	&__breakdowns-container {}
+
+	&__workers-container {}
+}

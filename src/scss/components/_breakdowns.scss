@@ -1,0 +1,92 @@
+.breakdowns {
+	display: grid;
+	grid-template-rows: auto #{rem(40)} auto #{rem(40)} auto;
+
+	&:has(.breakdowns__title) {
+		grid-template-areas: "title"
+			"."
+			"list"
+			"."
+			"link";
+
+		@container (min-width: 1200px) {
+			grid-template-columns: minmax(40px, 305px) 15px 65px minmax(10px, 365px) 20px minmax(10px, 365px) 20px minmax(10px, 365px);
+			grid-template-rows: auto #{rem(30)} auto 1fr;
+			grid-template-areas: "title . . list list list list list"
+				". . . list list list list list"
+				"link . . list list list list list"
+				". . . list list list list list";
+		}
+	}
+
+
+
+	&:has(.breakdowns__header) {
+		grid-template-areas: "header"
+			"."
+			"list"
+			"."
+			"pagination";
+
+		@container (min-width: 1200px) {
+			grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
+			grid-template-rows: auto #{rem(30)} auto 1fr;
+			grid-template-areas: "title . . list list list list list"
+				". . . list list list list list"
+				"link . . list list list list list"
+				". . . list list list list list";
+		}
+	}
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__header {
+		grid-area: header;
+	}
+
+	&__pagination {
+		grid-area: pagination;
+	}
+
+	&__link {
+		grid-area: link;
+		justify-content: center;
+
+		@container (min-width: 1004px) {
+			justify-self: start;
+		}
+	}
+
+	&__list {
+		grid-area: list;
+		display: flex;
+		flex-wrap: wrap;
+		margin: -10px -5px;
+
+		@container (min-width: 480px) {
+			margin: -10px -5px;
+		}
+
+		@container (min-width: 1004px) {
+			margin: -20px -10px;
+		}
+	}
+
+	&__list-item {
+		container-type: inline-size;
+		width: calc(100% / 1 * 1 - 10px);
+		margin: 10px 5px;
+
+		@container (min-width: 480px) {
+			width: calc(100% / 2 * 1 - 10px);
+			margin: 10px 5px;
+		}
+
+		@container (min-width: 1004px) {
+			width: calc(100% / 3 * 1 - 20px);
+			margin: 20px 10px;
+		}
+	}
+}

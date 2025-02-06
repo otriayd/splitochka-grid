@@ -1,0 +1,45 @@
+.button-link {
+	display: flex;
+	align-items: center;
+	column-gap: #{rem(10)};
+	white-space: nowrap;
+	padding-inline: 20px;
+	height: #{rem(40)};
+	border: 1px solid transparent;
+	@include fluid-text(16, 14);
+
+	svg {
+		transition: transform 0.1s ease-out;
+	}
+
+	&:hover {
+		svg {
+			transform: translateX(5px);
+		}
+	}
+
+	&_w-border-round {
+		border-radius: #{rem(50)};
+	}
+
+	&_w-border {
+		border: 1px solid var(--border-color-dark);
+
+		@include hover {
+			border-color: var(--hover-color);
+		}
+	}
+
+	&_w-bg {
+		background-color: var(--bg-main-color);
+
+		@include hover {
+			border-color: var(--hover-color);
+			background-color: transparent;
+		}
+	}
+
+	&_squire {
+		border-radius: var(--border-radius_min);
+	}
+}

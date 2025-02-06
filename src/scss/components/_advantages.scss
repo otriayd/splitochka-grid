@@ -1,0 +1,83 @@
+.advantages {
+	display: grid;
+	isolation: isolate;
+
+	&_w-bg {
+		grid-template-columns: 10px 1fr 10px;
+		grid-template-rows: auto #{rem(20)} #{rem(50)} auto #{rem(50)};
+		grid-template-areas: ". title ."
+			". . ."
+			". . ."
+			". list ."
+			". . .";
+
+		&::before {
+			grid-column: 1/-1;
+			grid-row: 3/-1;
+			height: 100%;
+			display: flex;
+			content: "";
+			background-color: var(--bg-main-color);
+			z-index: -1;
+		}
+
+		@container (min-width: 1200px) {
+			grid-template-columns: 10px 1fr minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px) 1fr 10px;
+			grid-template-rows: #{rem(150)} auto #{rem(150)};
+			grid-template-areas: ". . . . . . . . . . . ."
+				". . title . . list list list list list . ."
+				". . . . . . . . . . . .";
+
+			&::before {
+				grid-row: 1/-1;
+			}
+		}
+	}
+
+	&_simple {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto #{rem(30)} auto;
+		grid-template-areas: "title"
+			"."
+			"list";
+
+		@include mobile-above {
+			grid-template-rows: auto #{rem(50)} auto;
+		}
+	}
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__list {
+		grid-area: list;
+		display: flex;
+		flex-wrap: wrap;
+		margin: -10px -5px;
+
+		@container (min-width: 480px) {
+			margin: -10px -5px;
+		}
+
+		@container (min-width: 1004px) {
+			margin: -10px -10px;
+		}
+	}
+
+	&__list-item {
+		width: calc(100% / 1 * 1 - 10px);
+		margin: 10px 5px;
+		counter-increment: number;
+
+		@container (min-width: 680px) {
+			width: calc(100% / 3 * 1 - 10px);
+			margin: 10px 5px;
+		}
+
+		@container (min-width: 1004px) {
+			width: calc(100% / 3 * 1 - 20px);
+			margin: 10px 10px;
+		}
+	}
+}

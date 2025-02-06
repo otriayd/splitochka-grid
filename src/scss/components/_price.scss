@@ -1,0 +1,44 @@
+.product__price {}
+
+.price {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 20px;
+	align-items: flex-end;
+}
+
+.price__title {
+	line-height: 1;
+
+	&_min {
+		@include fluid-text(14, 12);
+	}
+
+	&_max {
+		@include fluid-text(18, 16);
+	}
+}
+
+.price__value {
+	font-family: var(--font-family-base-bold);
+	line-height: 1;
+
+	&_min {
+		@include fluid-text(16, 14);
+	}
+
+	&_max {
+		@include fluid-text(24, 18);
+	}
+}
+
+.price__value_current {
+	text-decoration: none;
+}
+
+.price__amount {
+	display: flex;
+	column-gap: 5px;
+}
+
+.price__symbol {}

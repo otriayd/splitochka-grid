@@ -1,0 +1,36 @@
+.cart {
+	container-type: inline-size;
+	display: grid;
+	grid-template-rows: auto #{rem(50)} auto #{rem(50)} auto;
+
+	grid-template-areas: "header"
+		"."
+		"table"
+		"."
+		"footer";
+
+	@container (min-width: 1200px) {
+		grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
+		grid-template-rows: auto #{rem(30)} auto 1fr;
+		grid-template-areas: "header . . table table table table table"
+			". . . table table table table table"
+			"link . . table table table table table"
+			". . . footer footer footer footer footer";
+	}
+}
+
+.cart__header {
+	grid-area: header;
+}
+
+.cart__header-title {}
+
+.title {}
+
+.cart__table {
+	grid-area: table;
+}
+
+.cart__footer {
+	grid-area: footer;
+}

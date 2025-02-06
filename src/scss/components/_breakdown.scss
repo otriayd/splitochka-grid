@@ -1,0 +1,45 @@
+.breakdown {
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto #{rem(20)} auto #{rem(15)} auto #{rem(10)} 1fr #{rem(20)} auto;
+	grid-template-areas: "line"
+		"."
+		"title"
+		"."
+		"subtitle"
+		"."
+		"list"
+		"."
+		"link";
+
+	&::before {
+		grid-area: line;
+		display: flex;
+		content: "";
+		height: 3px;
+		background-color: var(--theme-color);
+	}
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__subtitle {
+		grid-area: subtitle;
+	}
+
+	&__list {
+		grid-area: list;
+		list-style-type: disc;
+		padding-left: 20px;
+	}
+
+	&__list-item {
+		@include fluid-text(16, 14);
+	}
+
+	&__link {
+		grid-area: link;
+		justify-self: start;
+	}
+}

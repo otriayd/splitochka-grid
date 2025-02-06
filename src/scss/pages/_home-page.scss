@@ -1,0 +1,90 @@
+.home-page {
+	&__categorys-w-img-container {
+		grid-column: 3/10;
+
+		@include tablet-above {
+			margin-top: #{rem(30)}
+		}
+	}
+
+	&__brend-categorys-container {
+		grid-column: 3/10;
+		margin-top: #{rem(30)};
+
+		@include tablet-above {
+			margin-top: #{rem(50)}
+		}
+	}
+
+	&__slider-container {
+		grid-column: 1/-1;
+		margin-top: #{rem(50)};
+
+		@include tablet-above {
+			margin-top: #{rem(80)}
+		}
+	}
+
+	&__services-container {
+		grid-column: 3/10;
+		margin-top: #{rem(60)};
+
+		@include tablet-above {
+			margin-top: #{rem(120)}
+		}
+	}
+
+	&__products-container {
+		grid-column: 3/10;
+		margin-top: #{rem(60)};
+
+		@include tablet-above {
+			margin-top: #{rem(120)}
+		}
+	}
+
+	&__advantages-container {
+		grid-column: 1/-1;
+		margin-top: #{rem(60)};
+
+		@include tablet-above {
+			margin-top: #{rem(120)}
+		}
+	}
+
+	&__about-container {
+		grid-column: 3/10;
+		margin-top: #{rem(60)};
+
+		@include tablet-above {
+			margin-top: #{rem(120)}
+		}
+	}
+
+	&__breakdowns-container {
+		grid-column: 3/10;
+		margin-top: #{rem(60)};
+
+		@include tablet-above {
+			margin-top: #{rem(120)}
+		}
+	}
+
+	&__posts-container {
+		grid-column: 3/10;
+		margin-top: #{rem(60)};
+
+		@include tablet-above {
+			margin-top: #{rem(120)}
+		}
+	}
+
+	&__errors-container {
+		grid-column: 3/10;
+		margin-top: #{rem(80)};
+
+		@include tablet-above {
+			margin-top: #{rem(150)}
+		}
+	}
+}

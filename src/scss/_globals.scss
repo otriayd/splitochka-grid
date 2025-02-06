@@ -1,0 +1,61 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #F1F1F1;
+	/* font-size: 20px; */
+}
+
+body {
+	font-family: var(--font-family-base);
+	line-height: var(--line-height-base);
+	color: var(--text-color-base);
+}
+
+
+body.fixed {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	max-height: 100dvh;
+	margin-right: calc(-1 * (100vw - 100%));
+}
+
+p {
+	line-height: var(--line-height-base);
+}
+
+p:where(:not([class]):not(:last-child)) {
+	margin-bottom: 12px;
+
+	@include tablet-above {
+		margin-bottom: 2.05em;
+	}
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+button,
+input {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li,
+a {
+	line-height: var(--line-height-base);
+}
+
+strong {
+	font-family: var(--font-family-base-bold);
+}

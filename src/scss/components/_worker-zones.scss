@@ -1,0 +1,19 @@
+.worker-zones {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	@include fluid-text(16, 14);
+}
+
+.worker-zones__key {
+	flex-basis: 100%;
+
+	@container (min-width: 480px) {
+		flex-basis: auto;
+	}
+}
+
+.worker-zones__value {}
+
+.worker-zones__value-link {}

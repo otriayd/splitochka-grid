@@ -1,0 +1,49 @@
+.about {
+	container-type: inline-size;
+	display: grid;
+	grid-template-rows: auto #{rem(40)} auto #{rem(20)} auto #{rem(20)} auto;
+	grid-template-areas: "title"
+		"."
+		"pic"
+		"."
+		"content"
+		"."
+		"link";
+
+	@container (min-width: 1024px) {
+		grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 40px minmax(40px, 365px) 20px minmax(40px, 365px);
+		grid-template-rows: 1fr auto #{rem(20)} auto #{rem(30)} auto 1fr;
+		grid-template-areas: "pic pic pic pic . . . ."
+			"pic pic pic pic . title title title"
+			"pic pic pic pic . . . ."
+			"pic pic pic pic . content content content"
+			"pic pic pic pic . . . ."
+			"pic pic pic pic . link link link"
+			"pic pic pic pic . . . .";
+	}
+
+	&__pic {
+		grid-area: pic;
+	}
+
+	&__img {}
+
+	&__title {
+		grid-area: title;
+		@include fluid-text(28, 18);
+	}
+
+	&__content {
+		grid-area: content;
+		@include fluid-text(18, 14);
+	}
+
+	&__link {
+		justify-self: start;
+		grid-area: link;
+	}
+
+	.button-link {}
+
+	.button-link_w-bg {}
+}

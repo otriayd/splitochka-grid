@@ -1,0 +1,57 @@
+.product {
+	display: grid;
+	grid-template-columns: 10px 1fr 10px;
+	grid-template-rows: auto #{rem(20)} auto #{rem(10)};
+	grid-template-areas: ". link ."
+		". . ."
+		". button ."
+		". . .";
+	border-radius: var(--border-radius_mid);
+	border: 1px solid var(--border-color-dark);
+	transition: border 0.3s ease-out;
+
+	@include hover {
+		border-color: var(--hover-color);
+	}
+
+	&__link {
+		grid-area: link;
+		display: grid;
+		grid-template-rows: auto #{rem(5)} auto #{rem(10)} auto #{rem(10)} 1fr;
+		grid-template-areas: "pic"
+			"."
+			"rating"
+			"."
+			"price"
+			"."
+			"title";
+	}
+
+	&__pic {
+		width: 100%;
+		grid-area: pic;
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+
+	&__title {
+		@include fluid-text(16, 12);
+		grid-area: title;
+	}
+
+	&__button {
+		grid-area: button;
+	}
+
+	&__price {
+		grid-area: price;
+	}
+
+	&__rating-result {
+		grid-area: rating;
+	}
+}

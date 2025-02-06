@@ -1,0 +1,46 @@
+:root {
+	--font-family-base: "Pragmatica-Book", sans-serif;
+	--font-family-base-medium: "Pragmatica-Medium", sans-serif;
+	--font-family-base-bold: "Pragmatica-Bold", sans-serif;
+	--font-family-decorative-bold: "Pragmatica-Bold-Italic", sans-serif;
+
+	--index: calc(1vw + 1vh);
+
+	--text-color-base: #161616;
+	--text-color-maxlight: #ECECEC;
+	--text-color-minlight: #ABABAB;
+	--text-hover-color: #676767;
+
+
+
+
+	--accent-color: #7ECAC6;
+	--accent-button-color: #19708D;
+	--theme-color: #EDC89C;
+
+	--bg-light-color: #ECECEC;
+	--bg-dark-color: #2D2D2D;
+	--bg-main-color: #f1f1f1;
+
+	--hover-color: rgba(0, 0, 0, 0.8);
+	--hover-color-light: #f6f6f6;
+
+	--line-height-base: 1.6;
+
+	--border-color-dark: rgba(0, 0, 0, 0.3);
+	--border-color-light: rgba(255, 255, 255, 0.3);
+
+	--border-radius_max: #{rem(10)};
+	--border-radius_mid: #{rem(6)};
+	--border-radius_min: #{rem(4)};
+
+	--container-width: 1920px;
+	--container-padding-x: 20px;
+	--global-padding-x: 10px;
+
+	@include mobile-above {
+		--container-padding-x: 75px;
+	}
+
+	--transition-duration: 0.2s;
+}

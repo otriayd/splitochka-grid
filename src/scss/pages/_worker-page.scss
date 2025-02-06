@@ -1,0 +1,47 @@
+.worker-page {
+	&__worker-data {
+		margin-top: #{rem(20)};
+
+		@include mobile-above {
+			margin-top: #{rem(20)}
+		}
+	}
+
+	&__worker-tools {
+		margin-top: #{rem(30)};
+
+		@include mobile-above {
+			margin-top: #{rem(40)}
+		}
+	}
+
+	&__worker-zones {
+		margin-top: #{rem(30)};
+
+		@include mobile-above {
+			margin-top: #{rem(40)}
+		}
+	}
+
+	&__worker-description {
+		margin-top: #{rem(30)};
+
+		@include mobile-above {
+			margin-top: #{rem(40)}
+		}
+	}
+
+	&__reviews {
+		margin-top: #{rem(40)};
+
+		@include mobile-above {
+			margin-top: #{rem(60)}
+		}
+	}
+}
+
+@import "../components/worker-data";
+@import "../components/worker-description";
+@import "../components/worker-zones";
+@import "../components/worker-tools";
+@import "../components/tag-link";

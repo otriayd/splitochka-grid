@@ -1,0 +1,69 @@
+/* * {
+	outline: 3px solid green;
+} */
+
+.site {
+	container-type: inline-size;
+	container-name: site;
+	min-height: 100%;
+	max-width: var(--container-width);
+	margin-inline: auto;
+	display: grid;
+	grid-template-rows: auto 15px auto minmax(120px, 1fr) auto;
+	grid-template-areas: "header"
+		"main"
+		"main"
+		"footer";
+	align-items: start;
+
+
+	@include tablet-above {
+		grid-template-columns: 10px 1fr minmax(305px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(auto, 365px) 1fr 10px;
+	}
+
+	&:not(:has(.site__aside)) {
+		@include tablet-above {
+
+			grid-template-areas: "header header header header header header header header header header header header"
+				". . . . . . . . . . . ."
+				"main main main main main main main main main main main main"
+				"main main main main main main main main main main main main"
+				"footer footer footer footer footer footer footer footer footer footer footer footer";
+		}
+	}
+
+	&:has(.site__aside) {
+		@include tablet-above {
+			grid-template-rows: auto 15px 1fr auto;
+			grid-template-areas: "header header header header header header header header header header header header"
+				"aside aside aside . . . . . . . . ."
+				"aside aside aside . main main main main main main main main"
+				"footer footer footer footer footer footer footer footer footer footer footer footer";
+		}
+	}
+
+
+
+	&__header {
+		grid-area: header;
+	}
+
+	&__footer {
+		grid-area: footer;
+	}
+
+	&__aside {
+		grid-area: aside;
+		display: none;
+		height: 100%;
+	}
+
+	&__main {
+		grid-area: main;
+		height: 100%;
+	}
+}
+
+.block-container {
+	container-type: inline-size;
+}

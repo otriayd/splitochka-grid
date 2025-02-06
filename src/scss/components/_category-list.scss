@@ -1,0 +1,59 @@
+.category-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -5px -5px;
+
+	@container (min-width: 1004px) {
+		margin: -10px -10px;
+	}
+
+	&__item {
+		width: calc(100% / 2 * 1 - 10px);
+		margin: 5px 5px;
+
+		@container (min-width: 460px) {
+			width: calc(100% / 3 * 1 - 10px);
+		}
+
+		@container (min-width: 768px) {
+			width: calc(100% / 4 * 1 - 10px);
+		}
+
+		@container (min-width: 1004px) {
+			width: calc(100% / 5 * 1 - 20px);
+			margin: 10px 10px;
+		}
+
+		@container (min-width: 1180px) {
+			width: calc(100% / 6 * 1 - 10px);
+		}
+
+		&_8 {
+			@container (min-width: 1520px) {
+				width: calc(100% / 8 * 1 - 20px);
+			}
+		}
+
+		&_7 {
+			@container (min-width: 1520px) {
+				width: calc(100% / 7 * 1 - 20px);
+				margin: 10px 10px;
+			}
+		}
+
+		&_5 {
+			@container (min-width: 460px) {
+				width: calc(100% / 4 * 1 - 10px);
+			}
+
+			@container (min-width: 500px) {
+				width: calc(100% / 4 * 1 - 10px);
+			}
+
+			@container (min-width: 680px) {
+				width: calc(100% / 5 * 1 - 10px);
+			}
+		}
+
+	}
+}

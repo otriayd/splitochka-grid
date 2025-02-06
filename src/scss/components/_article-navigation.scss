@@ -1,0 +1,25 @@
+.article-navigation {
+	&__list {
+		display: grid;
+		row-gap: #{rem(10)};
+	}
+
+	&__list-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&::before {
+			display: flex;
+			content: "";
+			width: #{rem(8)};
+			height: #{rem(8)};
+			border-radius: #{rem(50)};
+			background-color: var(--text-color-base);
+		}
+
+		&-link {
+			@include fluid-text(18, 14);
+		}
+	}
+}

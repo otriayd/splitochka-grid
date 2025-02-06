@@ -1,0 +1,26 @@
+.error {
+	&__link {
+		display: flex;
+		justify-content: center;
+		padding: #{rem(20)};
+		border-radius: var(--border-radius_max);
+
+		&_dark {
+			border: 1px solid var(--border-color-dark);
+
+			&:hover {
+				border-color: var(--hover-color);
+			}
+		}
+
+		&_accent {
+			border: 1px solid var(--accent-button-color);
+			color: var(--accent-button-color);
+
+			&:hover {
+				border-color: var(--accent-color);
+				color: var(--accent-color);
+			}
+		}
+	}
+}

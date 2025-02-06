@@ -1,0 +1,20 @@
+.posts__pagination {}
+
+.pagination {
+	display: flex;
+	column-gap: 15px;
+}
+
+.pagination__item {
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
+	color: var(--text-color-minlight);
+	display: flex;
+	line-height: 100%;
+	padding: #{rem(15)};
+
+	&_active {
+		color: var(--text-color-base);
+		border: 1px solid var(--text-color-base);
+	}
+}

@@ -1,0 +1,15 @@
+.social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	&__item {
+		&:hover {
+			.icon {
+				filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.2));
+			}
+		}
+	}
+
+	&__item-link {}
+}

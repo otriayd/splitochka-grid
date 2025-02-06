@@ -1,0 +1,19 @@
+<script>
+	function loadStyle(url) {
+		let link = document.createElement('link');
+		link.href = url;
+		link.rel = 'stylesheet';
+		document.body.appendChild(link);
+	}
+	/* loadStyle('css/style.min.css'); */
+	/* loadStyle('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'); */
+</script>
+<script>
+	function loadJs(url) {
+		let script = document.createElement('script')
+		script.src = url
+		document.body.appendChild(script)
+	}
+	loadJs('js/app.min.js');
+	/* loadJs('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'); */
+</script>

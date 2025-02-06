@@ -1,0 +1,140 @@
+.reviews {
+	display: grid;
+	grid-template-columns: auto 40px 1fr;
+
+	&:has(.reviews__add_active) {
+		grid-template-rows: auto #{rem(40)} auto #{rem(40)} auto;
+		grid-template-areas: "title . button"
+			". . ."
+			"add add add"
+			". . ."
+			"accordion accordion accordion";
+	}
+
+	&:not(:has(.reviews__add_active)) {
+		grid-template-rows: auto auto #{rem(40)} auto;
+		grid-template-areas: "title . button"
+			"add add add"
+			". . ."
+			"accordion accordion accordion";
+	}
+}
+
+.reviews__title {
+	grid-area: title;
+	align-self: center;
+}
+
+.reviews__button {
+	grid-area: button;
+	justify-self: start;
+	align-self: center;
+}
+
+.reviews__add {
+	grid-area: add;
+}
+
+.reviews__accordion {
+	grid-area: accordion;
+}
+
+.rating-area {
+	display: grid;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+	overflow: hidden;
+	grid-template-rows: auto #{rem(10)} auto #{rem(10)} auto;
+	grid-template-areas: "set"
+		"."
+		"area"
+		"."
+		"submit";
+}
+
+.reviews__add_active .rating-area {
+	height: auto;
+	width: auto;
+	visibility: visible;
+}
+
+.rating-area__set-area {
+	grid-area: area;
+	border: 1px solid var(--border-color-dark);
+	border-radius: var(--border-radius_mid);
+	padding: 10px;
+	resize: none;
+}
+
+.rating-area__set {
+	grid-area: set;
+	display: flex;
+	align-self: start;
+	position: relative;
+	font-size: 24px;
+	display: inline-block;
+
+	&::before {
+		display: block;
+		content: "★★★★★";
+		color: var(--bg-main-color);
+		line-height: 1;
+	}
+}
+
+.rating-area__items {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row-reverse;
+	overflow: hidden;
+}
+
+.rating-area__set-input {
+	display: inline;
+	margin: 0;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.rating-area__set-input:checked,
+.rating-area__set-input:checked~.rating-area__set-label {
+	color: var(--theme-color);
+}
+
+.rating-area__set-label {
+	flex: 0 0 20%;
+	color: var(--bg-main-color);
+	line-height: 1;
+
+
+	&::before {
+		content: "★";
+		display: inline;
+		transition: color var(--transition-duration) ease;
+	}
+}
+
+.rating-area__set-label:hover,
+.rating-area__set-label:hover~.rating-area__set-label,
+.rating-area__set-label:checked~.rating-area__set-label:hover {
+	color: var(--theme-color) !important;
+}
+
+.rating-area__submit {
+	grid-area: submit;
+	justify-self: start;
+}
+
+.rating-area__set {
+	grid-area: rating;
+	justify-self: start;
+}
+
+.rating-area__items {
+	justify-self: start;
+}

@@ -1,0 +1,22 @@
+.aside {
+	&_solid {
+		background-color: #fff;
+	}
+
+	&_simple {
+		&::after {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			content: "";
+			background-color: #fff;
+		}
+	}
+
+	@include tablet-above {
+		display: flex;
+		flex-direction: column;
+		row-gap: 2px;
+		justify-items: start;
+	}
+}

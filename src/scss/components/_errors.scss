@@ -1,0 +1,51 @@
+.errors {
+	&:has(.errors__title):has(.errors__link) {
+		display: grid;
+		grid-template-rows: auto #{rem(40)} auto #{rem(50)} auto;
+		grid-template-areas: "title"
+			"."
+			"list"
+			"."
+			"link";
+
+		@container (min-width: 1200px) {
+			grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
+			grid-template-rows: auto #{rem(30)} auto 1fr;
+			grid-template-areas: "title . . list list list list list"
+				". . . list list list list list"
+				"link . . list list list list list"
+				". . . list list list list list";
+		}
+	}
+
+	&:has(.errors__title):not(:has(.errors__link)) {
+		display: grid;
+		grid-template-rows: auto #{rem(40)} auto;
+		grid-template-areas: "title"
+			"."
+			"list";
+	}
+
+	&:not(:has(.errors__title):has(.errors__link)) {
+		display: grid;
+	}
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__link {
+		grid-area: link;
+		justify-content: center;
+
+		@container (min-width: 1004px) {
+			justify-self: start;
+		}
+	}
+
+	&__lists {
+		grid-area: list;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

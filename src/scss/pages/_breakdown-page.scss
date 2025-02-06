@@ -1,0 +1,21 @@
+.breakdown-page {
+	&__article-navigation {}
+
+	&__breakdowns-container {}
+
+	&__text-list {
+		margin-top: #{rem(40)};
+
+		@include tablet-above {
+			margin-top: #{rem(60)};
+		}
+	}
+
+	&__workers-container {
+		margin-top: #{rem(50)};
+
+		@include tablet-above {
+			margin-top: #{rem(100)};
+		}
+	}
+}

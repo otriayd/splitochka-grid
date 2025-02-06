@@ -1,0 +1,13 @@
+.worker-data {
+	display: grid;
+	@include fluid-text(20, 16);
+}
+
+.worker-data__item {
+	display: flex;
+	gap: 15px;
+}
+
+.worker-data__item-key {}
+
+.worker-data__item-value {}

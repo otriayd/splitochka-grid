@@ -1,0 +1,26 @@
+.main {
+	display: grid;
+
+	&_light {
+		background-color: #fff;
+	}
+
+	&_near-aside {
+		grid-template-columns: var(--global-padding-x) 1fr var(--global-padding-x);
+
+		@include tablet-above {
+			grid-template-columns: 65px minmax(10px, 365px) 20px minmax(10px, 365px) 20px minmax(10px, 365px) var(--global-padding-x);
+		}
+	}
+
+	&_landing {
+		grid-template-columns: var(--global-padding-x) 1fr minmax(10px, 365px) 10px minmax(10px, 365px) 10px minmax(10px, 365px) 10px minmax(10px, 365px) 1fr var(--global-padding-x);
+		padding-bottom: #{rem(60)};
+
+
+		@include tablet-above {
+			grid-template-columns: var(--global-padding-x) 1fr minmax(10px, 365px) 20px minmax(10px, 365px) 20px minmax(10px, 365px) 20px minmax(10px, 365px) 1fr var(--global-padding-x);
+			padding-bottom: #{rem(100)};
+		}
+	}
+}

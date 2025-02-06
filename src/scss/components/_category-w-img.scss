@@ -1,0 +1,40 @@
+.category-w-img {
+	border: 1px solid transparent;
+
+	@include hover {
+		border: 1px solid var(--hover-color);
+	}
+
+	&_w-bg {
+		background-color: var(--bg-main-color);
+	}
+
+	&_w-border {
+		border: 1px solid var(--border-color-dark);
+	}
+
+	display: grid;
+	grid-template-columns: 20px 1fr 20px;
+	grid-template-rows: #{rem(20)} 2.8ch #{rem(10)} 1fr #{rem(20)};
+	grid-template-areas: ". . ."
+	". title ."
+	". . ."
+	"pic pic pic"
+	". . .";
+	border-radius: var(--border-radius_max);
+
+	&__title {
+		grid-area: title;
+		@include fluid-text(14, 14);
+	}
+
+	&__pic {
+		grid-area: pic;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

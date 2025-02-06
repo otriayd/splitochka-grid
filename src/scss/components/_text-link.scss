@@ -1,0 +1,15 @@
+.text-link {
+	transition: color var(--transition-duration) ease;
+
+	@include hover {
+		color: var(--text-color-minlight);
+	}
+}
+
+.text-link-dark {
+	transition: color var(--transition-duration) ease;
+
+	@include hover {
+		color: var(--text-color-maxlight);
+	}
+}
