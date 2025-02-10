@@ -26,7 +26,6 @@
 				</header>
 				<div class="single-product__price">
 					<div class="price">
-						<span class="price__title price__title_max">Цена: </span>
 						<ins class="price__value price__value_current price__value_max">
 							<span class="price__amount">
 								<bdi>30.000</bdi>
@@ -34,8 +33,18 @@
 							</span>
 						</ins>
 					</div>
-					<button class="price__order action-button">В корзину</button>
 				</div>
+				<form class="single-product__form-add-to-cart form-add-to-cart">
+					<div class="form-add-to-cart__quantity">
+						<label class="screen-reader-text" for="quantity_67a8c671b53f9">Album quantity</label>
+						<div class="form-add-to-cart__quantity-button quantity-button">+</div>
+						<input type="number" id="quantity_67a8c671b53f9" class="form-add-to-cart__quantity-input"
+							name="quantity" value="1" aria-label="Product quantity" min="1" max="" step="1" placeholder=""
+							inputmode="numeric" autocomplete="off">
+						<div class="form-add-to-cart__quantity-button quantity-button">-</div>
+					</div>
+					<button type="submit" name="add-to-cart" value="71" class="action-button">В корзину</button>
+				</form>
 				<div class="single-product__media-block media-block">
 					<div class="media-block__view swiper">
 						<div class="swiper-wrapper media-block__view-wrapper">
@@ -245,12 +254,8 @@
 				<section class="product-page__products-container container block-container">
 					<div class="products">
 						<h2 class="products__title title title_h2">Похожие товары</h2>
-						<a href="/" class="products__link button-link button-link_w-bg button-link_squire">Перейти в
+						<a href="/" class="products__link link-under">Перейти в
 							каталог
-							<svg class="icon__svg" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M10.108 6.875 6.755 3.523l.884-.884L12.501 7.5l-4.862 4.861-.884-.884 3.353-3.352H2.5v-1.25h7.608z" />
-							</svg>
 						</a>
 						<ul class="products__list">
 							<li class="products__list-item">

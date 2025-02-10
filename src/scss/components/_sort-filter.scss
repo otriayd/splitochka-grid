@@ -1,29 +1,23 @@
-.archive-tools__sort-filter {}
-
-.sort-filter {}
-
-.sort-filter__sort-form {}
-
-.sort-form {
+.sort-filter {
 	display: flex;
-	white-space: nowrap;
+	flex-wrap: wrap;
 	column-gap: 40px;
-	align-items: center;
 }
 
-.sort-form__set {
+.sort-filter__title {
+	white-space: nowrap;
+}
+
+.sort-filter__list {
 	display: flex;
-	column-gap: 20px;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
-.sort-form__set-title {}
+.sort-filter__item {}
 
-.sort-form__label:checked {
-	color: var(--text-color-minlight);
+.sort-filter__item_current {
+	opacity: 0.3;
 }
 
-.sort-form__label:has(.sort-form__radio:checked) {
-	color: var(--text-color-minlight);
-}
-
-.sort-form__radio:checked {}
+.sort-filter__item-link {}

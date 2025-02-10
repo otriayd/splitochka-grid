@@ -20,45 +20,19 @@
 		grid-area: list;
 		display: flex;
 		flex-wrap: wrap;
+		margin: -10px -10px;
 	}
 
 	&__list-item {
-		width: calc(100% / 1 * 1);
-
-		&:nth-child(8) {
-			.service {
-				&::after {
-					background-color: var(--theme-color);
-				}
-			}
-		}
+		margin: 10px 10px;
+		width: calc(100% / 1 * 1 - 20px);
 
 		@container (min-width: 480px) {
-			width: calc(100% / 2 * 1);
-
-			&:nth-child(7),
-			&:nth-child(8) {
-				.service {
-					&::after {
-						background-color: var(--theme-color);
-					}
-				}
-			}
+			width: calc(100% / 2 * 1 - 20px);
 		}
 
 		@container (min-width: 1004px) {
-			width: calc(100% / 4 * 1);
-
-			&:nth-child(7),
-			&:nth-child(8),
-			&:nth-child(6),
-			&:nth-child(5) {
-				.service {
-					&::after {
-						background-color: var(--theme-color);
-					}
-				}
-			}
+			width: calc(100% / 4 * 1 - 20px);
 		}
 	}
 }

@@ -1,22 +1,13 @@
 .posts {
 	display: grid;
-	grid-template-rows: auto #{rem(50)} auto #{rem(50)} auto;
+	grid-template-rows: auto #{rem(50)} auto #{rem(40)} auto;
 
 	&:has(.posts__title) {
 		grid-template-areas: "title"
 			"."
-			"list"
+			"link"
 			"."
-			"link";
-
-		@container (min-width: 1200px) {
-			grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
-			grid-template-rows: auto #{rem(30)} auto 1fr;
-			grid-template-areas: "title . . list list list list list"
-				". . . list list list list list"
-				"link . . list list list list list"
-				". . . list list list list list";
-		}
+			"list";
 	}
 
 	&:has(.posts__header) {
@@ -25,15 +16,6 @@
 			"list"
 			"."
 			"pagination";
-
-		@container (min-width: 1200px) {
-			grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
-			grid-template-rows: auto #{rem(30)} auto 1fr;
-			grid-template-areas: "title . . list list list list list"
-				". . . list list list list list"
-				"link . . list list list list list"
-				". . . list list list list list";
-		}
 	}
 
 	&__title {
@@ -61,24 +43,24 @@
 		grid-area: list;
 		display: flex;
 		flex-wrap: wrap;
-		margin: -10px -5px;
+		margin: -10px -10px;
 
 		@container (min-width: 1004px) {
-			margin: -20px -10px;
+			margin: -10px -10px;
 		}
 
 		&-item {
-			width: calc(100% / 2 * 1 - 10px);
-			margin: 10px 5px;
+			width: calc(100% / 2 * 1 - 20px);
+			margin: 10px 10px;
 
 			@container (min-width: 680px) {
-				width: calc(100% / 3 * 1 - 10px);
-				margin: 10px 5px;
+				width: calc(100% / 3 * 1 - 20px);
+				margin: 10px 10px;
 			}
 
-			@container (min-width: 1004px) {
-				width: calc(100% / 3 * 1 - 20px);
-				margin: 20px 10px;
+			@container (min-width: 1200px) {
+				width: calc(100% / 4 * 1 - 20px);
+				margin: 10px 10px;
 			}
 		}
 	}

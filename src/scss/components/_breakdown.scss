@@ -1,16 +1,19 @@
 .breakdown {
 	height: 100%;
 	display: grid;
-	grid-template-rows: auto #{rem(20)} auto #{rem(15)} auto #{rem(10)} 1fr #{rem(20)} auto;
-	grid-template-areas: "line"
-		"."
-		"title"
+	grid-template-rows: 1fr #{rem(15)} auto #{rem(15)} auto #{rem(20)} auto #{rem(20)} auto;
+	grid-template-areas: "title"
 		"."
 		"subtitle"
+		"."
+		"line"
 		"."
 		"list"
 		"."
 		"link";
+	padding: 30px;
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
 
 	&::before {
 		grid-area: line;

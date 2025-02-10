@@ -21,7 +21,7 @@
 	". . ."
 	"pic pic pic"
 	". . .";
-	border-radius: var(--border-radius_max);
+	border-radius: var(--border-radius_min);
 
 	&__title {
 		grid-area: title;

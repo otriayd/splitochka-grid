@@ -59,3 +59,27 @@ a {
 strong {
 	font-family: var(--font-family-base-bold);
 }
+
+/* Для Chrome и Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* Для IE и Edge */
+input[type="number"]::-ms-clear {
+	display: none;
+}
+
+/* Скрытие стандартных кнопок управления в Chrome */
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	height: 0;
+	opacity: 0;
+}

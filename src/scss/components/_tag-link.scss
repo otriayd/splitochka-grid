@@ -1,7 +1,7 @@
 .tag-link {
 	display: flex;
 	padding: #{rem(5)} #{rem(15)};
-	border-radius: #{rem(50)};
+	border-radius: var(--border-radius_min);
 	border: 1px solid var(--accent-button-color);
 	color: var(--accent-button-color);
 	font-family: var(--font-family-base-medium);

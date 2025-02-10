@@ -1,12 +1,12 @@
 .product {
 	display: grid;
 	grid-template-columns: 10px 1fr 10px;
-	grid-template-rows: auto #{rem(20)} auto #{rem(10)};
+	grid-template-rows: auto #{rem(20)} auto #{rem(20)};
 	grid-template-areas: ". link ."
 		". . ."
 		". button ."
 		". . .";
-	border-radius: var(--border-radius_mid);
+	border-radius: var(--border-radius_min);
 	border: 1px solid var(--border-color-dark);
 	transition: border 0.3s ease-out;
 
@@ -17,12 +17,12 @@
 	&__link {
 		grid-area: link;
 		display: grid;
-		grid-template-rows: auto #{rem(5)} auto #{rem(10)} auto #{rem(10)} 1fr;
+		grid-template-rows: auto #{rem(10)} auto #{rem(15)} auto #{rem(15)} 1fr;
 		grid-template-areas: "pic"
 			"."
-			"rating"
-			"."
 			"price"
+			"."
+			"rating"
 			"."
 			"title";
 	}
@@ -45,6 +45,7 @@
 
 	&__button {
 		grid-area: button;
+		justify-self: start;
 	}
 
 	&__price {

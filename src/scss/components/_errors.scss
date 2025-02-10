@@ -4,18 +4,9 @@
 		grid-template-rows: auto #{rem(40)} auto #{rem(50)} auto;
 		grid-template-areas: "title"
 			"."
-			"list"
+			"link"
 			"."
-			"link";
-
-		@container (min-width: 1200px) {
-			grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
-			grid-template-rows: auto #{rem(30)} auto 1fr;
-			grid-template-areas: "title . . list list list list list"
-				". . . list list list list list"
-				"link . . list list list list list"
-				". . . list list list list list";
-		}
+			"list";
 	}
 
 	&:has(.errors__title):not(:has(.errors__link)) {

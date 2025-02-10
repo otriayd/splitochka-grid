@@ -1,6 +1,4 @@
 .service {
-	--decorative-line-height: 3px;
-
 	@include hover {
 		.service__icon {
 			background-color: var(--hover-color-light);
@@ -12,32 +10,15 @@
 	}
 
 	display: grid;
-	grid-template-columns: auto 15px 1fr 20px;
-	grid-template-rows: auto #{rem(25)} auto calc(#{rem(25)} - var(--decorative-line-height)) auto;
-	grid-template-areas: "line-top line-top line-top line-top"
-	". . . ."
-	"icon . title ."
-	". . . ."
-	"line-bottom line-bottom line-bottom line-bottom";
+	grid-template-columns: 20px auto 15px 1fr 20px;
+	grid-template-rows: #{rem(15)} auto #{rem(15)};
+	grid-template-areas: ". . . . ."
+	". icon . title ."
+	". . . . .";
 	align-items: center;
 	justify-content: start;
-
-
-	&::before,
-	&::after {
-		display: flex;
-		content: "";
-		height: 3px;
-	}
-
-	&::before {
-		grid-area: line-top;
-		background-color: var(--theme-color);
-	}
-
-	&::after {
-		grid-area: line-bottom;
-	}
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
 
 	&__icon {
 		grid-area: icon;
@@ -45,5 +26,6 @@
 
 	&__title {
 		grid-area: title;
+		@include fluid-text(16, 16);
 	}
 }

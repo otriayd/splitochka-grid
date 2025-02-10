@@ -1,0 +1,38 @@
+.single-product__form-add-to-cart {}
+
+.form-add-to-cart {
+	display: flex;
+	justify-content: start;
+	justify-self: start;
+	gap: 20px;
+}
+
+.form-add-to-cart__quantity {
+	display: flex;
+	justify-content: start;
+	position: relative;
+	border: 1px solid var(--border-color-dark);
+	border-radius: var(--border-radius_min);
+}
+
+.screen-reader-text {}
+
+.form-add-to-cart__quantity-input {
+	display: flex;
+	height: #{rem(40)};
+	max-width: 40px;
+	text-align: center;
+
+}
+
+.quantity-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: #{rem(40)};
+	aspect-ratio: 1/1;
+	border-radius: var(--border-radius_min);
+	cursor: pointer;
+}
+
+.action-button {}

@@ -1,0 +1,24 @@
+.workers__choice-city {}
+
+.choice-city {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 20px;
+}
+
+.choice-city__title {}
+
+.choice-city__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.choice-city__item {}
+
+.choice-city__item_current {
+	opacity: 0.4;
+}
+
+.choice-city__item-link {}
