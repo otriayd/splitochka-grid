@@ -10,8 +10,13 @@
 		grid-column: 2;
 		display: grid;
 		grid-template-columns: repeat(3, minmax(10px, 365px));
+		grid-template-rows: auto #{rem(30)} auto;
 		column-gap: 10px;
 		margin-top: #{rem(30)};
+
+		@include mobile-above {
+			grid-template-rows: auto #{rem(40)} auto;
+		}
 
 		@include tablet-above {
 			grid-column: 2 / 7;
@@ -21,13 +26,11 @@
 
 		&_simple {
 			&:has(.page__main-content_column2) {
-				grid-template-rows: auto #{rem(30)} auto;
 				grid-template-areas: "header header header"
 					". . ."
 					"content content content";
 
 				@include mobile-above {
-					grid-template-rows: auto #{rem(60)} auto;
 					grid-template-areas: "header header ."
 						". . ."
 						"content content .";
@@ -35,13 +38,11 @@
 			}
 
 			&:has(.page__main-content_column3) {
-				grid-template-rows: auto #{rem(30)} auto;
 				grid-template-areas: "header header header"
 					". . ."
 					"content content content";
 
 				@include mobile-above {
-					grid-template-rows: auto #{rem(60)} auto;
 					grid-template-areas: "header header ."
 						". . ."
 						"content content content";
@@ -93,39 +94,18 @@
 
 		&-header {
 			grid-area: header;
-			display: grid;
 
-			&:not(:has(.page__main-header-content)) {
-				grid-template-rows: auto;
-				grid-template-areas: "title";
-			}
-
-			&:has(.page__main-header-content) {
-				grid-template-rows: auto #{rem(30)} auto;
-				grid-template-areas: "title"
-					"."
-					"content";
-			}
-
-			&:has(.page__main-header-content) {
-				grid-template-rows: auto #{rem(30)} auto;
-				grid-template-areas: "title"
-					"."
-					"content";
-			}
-
-			&-title {
-				grid-area: title;
-			}
+			&-title {}
 
 			&-content {
-				grid-area: content;
+				margin-top: 20px;
 				@include fluid-text(18, 16);
 			}
 		}
 
 		&-content {
 			grid-area: content;
+			@include fluid-text(18, 16);
 		}
 
 		&-footer {
@@ -134,11 +114,14 @@
 
 		&-pic {
 			grid-area: pic;
+			justify-self: start;
+
+			@include mobile-above {
+				justify-self: end;
+			}
 		}
 
-		&-img {
-			width: 100%;
-		}
+		&-img {}
 	}
 
 	&__footer {
@@ -147,7 +130,7 @@
 
 		@include tablet-above {
 			grid-column: 2/7;
-			margin-top: #{rem(100)};
+			margin-top: #{rem(80)};
 		}
 	}
 }

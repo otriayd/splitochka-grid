@@ -13,15 +13,9 @@
 					<h1 class="page__main-header-title title title_h1">Такой страницы у нас нет!
 					</h1>
 				</header>
-				<!-- <picture class="page__main-pic">
-					<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-						srcset="@img/workers/worker-1.webp">
-					<img src="@img/workers/worker-1.webp" width="249" height="300" loading="lazy" alt="Анимационная фигура"
-						class="page__main-img">
-				</picture> -->
 				<div class="page__main-content page__main-content_column3">
-					<div class="search-container search-container_lonely">
-						<span class="search-form__label-text">Воспользуйтесь поиском: </span>
+					<div class="404-page__search-container search-container">
+						<span class="search-form__label-text">Попробуйте поискать: </span>
 						<form action="/" class="search-container__search-form search-form" method="get">
 							<input type="text" class="search-form__field" placeholder="Поиск">
 							<button type="submit" class="search-form__submit" aria-label="Искать">
@@ -38,7 +32,7 @@
 											<picture class="search-result-component__pic">
 												<source media="(min-width: 1025px)" type="image/webp" width="959" height="839"
 													srcset="@img/posts/posts-item-1.webp">
-												<img src="@img/posts/posts-item-1.webp" width="375" height="397"
+												<img src="@img/posts/posts-item-1.webp" loading="lazy" width="375" height="397"
 													alt="Анимационная фигура" class="search-result-component__img">
 											</picture>
 											<h2 class="search-result-component__title title search-result-component__title_min">
@@ -64,25 +58,35 @@
 				<div class="services-page__workers-container block-container">
 					<div class="workers">
 						<h2 class="workers__title title title_h2">Мастера по ремонту кондиционера в Ессентуках</h2>
-						<a href="/" class="workers__link button-link button-link_w-bg button-link_squire">Все мастера
-							<svg class="icon__svg" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M10.108 6.875 6.755 3.523l.884-.884L12.501 7.5l-4.862 4.861-.884-.884 3.353-3.352H2.5v-1.25h7.608z" />
-							</svg>
-						</a>
+						<div class="workers__choice-city choice-city">
+							<p class="choice-city__title">Выберите мастеров из своего города:</p>
+							<ul class="choice-city__list">
+								<li class="choice-city__item choice-city__item_current">
+									<span class="tag-link">Ессентуки</span>
+								</li>
+								<li class="choice-city__item">
+									<a href="/" class="choice-city__item-link tag-link">Пятигорск</a>
+								</li>
+								<li class="choice-city__item">
+									<a href="/" class="choice-city__item-link tag-link">Кисловодск</a>
+								</li>
+								<li class="choice-city__item">
+									<a href="/" class="choice-city__item-link tag-link">Мин.воды</a>
+								</li>
+							</ul>
+						</div>
 						<ul class="workers__list">
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-1.webp">
-											<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-1.webp">
+										<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
 												<span class="rating-result__item">★</span>
@@ -91,49 +95,46 @@
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-2.webp">
-											<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-2.webp">
+										<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
 												<span class="rating-result__item">★</span>
 												<span class="rating-result__item">★</span>
 												<span class="rating-result__item">★</span>
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-3.webp">
-											<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-3.webp">
+										<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
 												<span class="rating-result__item">★</span>
@@ -142,23 +143,22 @@
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-4.webp">
-											<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-4.webp">
+										<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
 												<span class="rating-result__item">★</span>
@@ -167,12 +167,15 @@
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
 						</ul>
+						<a href="/" class="workers__link link-under">
+							Все мастера в городе Ессентуки
+						</a>
 					</div>
 				</div>
 			</div>

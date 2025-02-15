@@ -165,13 +165,20 @@
 						</div>
 					</div>
 				</div>
-				<form action="/" method="get" class="header-top__city-form city-form">
-					<select name="city-form" class="city-form__select" aria-label="Выбрать город">
-						<option class="city-form__option" value="Пятигорск">Пятигорск</option>
-						<option class="city-form__option" value="Ессентуки">Ессентуки</option>
-						<option class="city-form__option" value="Кисловодск">Кисловодск</option>
-					</select>
-				</form>
+				<div class="header-top__global-city-choice global-city-choice">
+					<p class="global-city-choice__item global-city-choice__item_current">Ессентуки</p>
+					<ul class="global-city-choice__list">
+						<li class="global-city-choice__item">
+							<a href="/" class="global-city-choice__item-link">Пятигорск</a>
+						</li>
+						<li class="global-city-choice__item">
+							<a href="/" class="global-city-choice__item-link">Кисловодск</a>
+						</li>
+						<li class="global-city-choice__item">
+							<a href="/" class="global-city-choice__item-link">Мин.Воды</a>
+						</li>
+					</ul>
+				</div>
 				<div class="header-top__search-container search-container">
 					<form action="/" class="search-container__search-form search-form" method="get">
 						<input type="text" class="search-form__field" placeholder="Поиск">

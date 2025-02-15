@@ -154,7 +154,7 @@
 		grid-area: left;
 		display: grid;
 		grid-template-columns: auto 20px auto 20px minmax(100px, 470px);
-		grid-template-areas: "catalog . city-form . search . . data-panel";
+		grid-template-areas: "catalog . city . search . . data-panel";
 	}
 
 	&__catalog-block {
@@ -162,8 +162,8 @@
 		justify-self: start;
 	}
 
-	&__city-form {
-		grid-area: city-form;
+	&__global-city-choice {
+		grid-area: city;
 	}
 
 	&__search-container {

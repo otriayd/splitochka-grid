@@ -1,36 +1,41 @@
 .cart {
 	container-type: inline-size;
-	display: grid;
-	grid-template-rows: auto #{rem(50)} auto #{rem(50)} auto;
-
-	grid-template-areas: "header"
-		"."
-		"table"
-		"."
-		"footer";
-
-	@container (min-width: 1200px) {
-		grid-template-columns: minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(40px, 365px);
-		grid-template-rows: auto #{rem(30)} auto 1fr;
-		grid-template-areas: "header . . table table table table table"
-			". . . table table table table table"
-			"link . . table table table table table"
-			". . . footer footer footer footer footer";
-	}
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
 }
 
 .cart__header {
-	grid-area: header;
+	flex-basis: 100%;
 }
 
-.cart__header-title {}
-
-.title {}
+.cart__main {
+	flex-basis: calc(50% - 40px);
+}
 
 .cart__table {
-	grid-area: table;
+	width: 100%;
 }
 
-.cart__footer {
-	grid-area: footer;
+.cart__table-header {}
+
+.cart__table-row {
+	display: flex;
+	padding-block: 10px;
+
+	&_bordered {
+		border-top: 1px solid var(--border-color-dark);
+	}
+}
+
+.cart__table-column {
+	text-align: left;
+
+	&:not(:first-child) {
+		padding-left: 20px;
+	}
+
+	&:nth-child(2) {
+		flex-grow: 1;
+	}
 }

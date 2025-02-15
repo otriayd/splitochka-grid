@@ -22,147 +22,159 @@
 				<div class="page__main-content page__main-content_column3">
 					<section class="posts-page__posts-container block-container">
 						<div class="posts">
-							<div class="posts__header">
-								<div class="archive-tools">
-									<div class="archive-tools__search-container search-container">
-										<span class="search-form__label-text">Поиск в разделе "Полезные статьи": </span>
-										<form action="/" class="search-container__search-form search-form" method="get">
-											<input type="text" class="search-form__field" placeholder="Поиск">
-											<button type="submit" class="search-form__submit" aria-label="Искать">
-												<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none"
-													viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="m18.125 17.241-4.72-4.72a6.886 6.886 0 1 0-.884.884l4.72 4.72.884-.884zM2.5 8.125a5.625 5.625 0 1 1 5.625 5.625A5.631 5.631 0 0 1 2.5 8.125z" />
-												</svg>
-											</button>
-											<div
-												class="search-form__search-result-block search-result-block search-result-block_w-bg">
-												<ul class="search-result-block__search-result search-result">
-													<li class="search-result__item">
-														<a href="/" class="search-result-component search-result-component_min">
-															<picture class="search-result-component__pic">
-																<source media="(min-width: 1025px)" type="image/webp" width="959"
-																	height="839" srcset="@img/posts/posts-item-1.webp">
-																<img src="@img/posts/posts-item-1.webp" loading="lazy" width="375"
-																	height="397" alt="Анимационная фигура"
-																	class="search-result-component__img">
-															</picture>
-															<h2
-																class="search-result-component__title title search-result-component__title_min">
-																Не включается кондиционер
-															</h2>
-															<div
-																class="search-result-component__excerpt search-result-component__excerpt_min">
-																<p>необязательное краткое изложение или описание записи, одним словом,
-																	её анонс</p>
-															</div>
-														</a>
-													</li>
-												</ul>
-												<div class="search-result-block__note">
-													<p>Если результатов поиска не достаточно нажмите искать, там больше результатов
-													</p>
-												</div>
-											</div>
-										</form>
+							<div class="posts__search-container search-container">
+								<span class="search-form__label-text">Поиск в разделе "Полезные статьи": </span>
+								<form action="/" class="search-container__search-form search-form" method="get">
+									<input type="text" class="search-form__field" placeholder="Поиск">
+									<button type="submit" class="search-form__submit" aria-label="Искать">
+										<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none"
+											viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="m18.125 17.241-4.72-4.72a6.886 6.886 0 1 0-.884.884l4.72 4.72.884-.884zM2.5 8.125a5.625 5.625 0 1 1 5.625 5.625A5.631 5.631 0 0 1 2.5 8.125z" />
+										</svg>
+									</button>
+									<div class="search-form__search-result-block search-result-block search-result-block_w-bg">
+										<ul class="search-result-block__search-result search-result">
+											<li class="search-result__item">
+												<a href="/" class="search-result-component search-result-component_min">
+													<picture class="search-result-component__pic">
+														<source media="(min-width: 1025px)" type="image/webp" width="959" height="839"
+															srcset="@img/posts/posts-item-1.webp">
+														<img src="@img/posts/posts-item-1.webp" loading="lazy" width="375"
+															height="397" alt="Анимационная фигура"
+															class="search-result-component__img">
+													</picture>
+													<h2
+														class="search-result-component__title title search-result-component__title_min">
+														Не включается кондиционер
+													</h2>
+													<div
+														class="search-result-component__excerpt search-result-component__excerpt_min">
+														<p>необязательное краткое изложение или описание записи, одним словом,
+															её анонс</p>
+													</div>
+												</a>
+											</li>
+										</ul>
+										<div class="search-result-block__note">
+											<p>Если результатов поиска не достаточно нажмите искать, там больше результатов
+											</p>
+										</div>
 									</div>
-								</div>
+								</form>
 							</div>
 							<ul class="posts__list">
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-1.webp">
 											<img src="@img/posts/posts-item-1.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер Как
+												правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-2.webp">
 											<img src="@img/posts/posts-item-2.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-3.webp">
 											<img src="@img/posts/posts-item-3.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-4.webp">
 											<img src="@img/posts/posts-item-4.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-5.webp">
 											<img src="@img/posts/posts-item-5.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционе6</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-6.webp">
 											<img src="@img/posts/posts-item-6.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-1.webp">
 											<img src="@img/posts/posts-item-1.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
-								<li class="posts__list-item">
-									<a href="/" class="post">
+								<li class="posts__item post">
+									<a href="/" class="post__link">
 										<picture class="post__pic">
 											<source media="(min-width: 1025px)" type="image/webp" width="355" height="259"
 												srcset="@img/posts/posts-item-2.webp">
 											<img src="@img/posts/posts-item-2.webp" loading="lazy" width="355" height="259"
 												alt="Анимационная фигура" class="post__img">
 										</picture>
-										<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
-										<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										<div class="post__data">
+											<time class="post__time" datetime="2024-08-02">02 Август 2024</time>
+											<h3 class="post__title title title_h3">Как правильно установить кондиционер</h3>
+										</div>
 									</a>
 								</li>
 							</ul>
@@ -185,39 +197,35 @@
 				<div class="posts-page__workers-container block-container">
 					<div class="workers">
 						<h2 class="workers__title title title_h2">Мастера по ремонту кондиционера в Ессентуках</h2>
-						<a href="/" class="workers__link link-under">
-							Все мастера в городе Ессентуки
-						</a>
 						<div class="workers__choice-city choice-city">
-							<p class="choice-city__title">Выберите свой город:</p>
+							<p class="choice-city__title">Выберите мастеров из своего города:</p>
 							<ul class="choice-city__list">
-								<li class="choice-city__item choice-city__item_current tag-link">
-									Ессентуки
+								<li class="choice-city__item choice-city__item_current">
+									<span class="tag-link">Ессентуки</span>
 								</li>
-								<li class="choice-city__item tag-link">
-									<a href="/" class="choice-city__item-link">Пятигорск</a>
+								<li class="choice-city__item">
+									<a href="/" class="choice-city__item-link tag-link">Пятигорск</a>
 								</li>
-								<li class="choice-city__item tag-link">
-									<a href="/" class="choice-city__item-link">Кисловодск</a>
+								<li class="choice-city__item">
+									<a href="/" class="choice-city__item-link tag-link">Кисловодск</a>
 								</li>
-								<li class="choice-city__item tag-link">
-									<a href="/" class="choice-city__item-link">Мин.воды</a>
+								<li class="choice-city__item">
+									<a href="/" class="choice-city__item-link tag-link">Мин.воды</a>
 								</li>
 							</ul>
 						</div>
 						<ul class="workers__list">
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-1.webp">
-											<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-1.webp">
+										<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
 												<span class="rating-result__item">★</span>
@@ -226,49 +234,46 @@
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-2.webp">
-											<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-2.webp">
+										<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
 												<span class="rating-result__item">★</span>
 												<span class="rating-result__item">★</span>
 												<span class="rating-result__item">★</span>
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-3.webp">
-											<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-3.webp">
+										<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
 												<span class="rating-result__item">★</span>
@@ -277,23 +282,22 @@
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
-							<li class="workers__list-item">
-								<div class="worker worker_block">
-									<a href="" class="worker__link">
-										<picture class="worker__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-												srcset="@img/workers/worker-4.webp">
-											<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
-												alt="Анимационная фигура" class="worker__img">
-										</picture>
+							<li class="workers__item worker">
+								<a href="" class="worker__link">
+									<picture class="worker__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+											srcset="@img/workers/worker-4.webp">
+										<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
+											alt="Анимационная фигура" class="worker__img">
+									</picture>
+									<div class="worker__data">
 										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
 										<h4 class="worker__name title">Иван Семёнов</h4>
-
 										<div class="worker__rating-result rating-result">
 											<div class="rating-result__list">
 												<span class="rating-result__item">★</span>
@@ -302,12 +306,15 @@
 											</div>
 											23 отзыва
 										</div>
-									</a>
-									<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-										441-26-88</a>
-								</div>
+									</div>
+								</a>
+								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+									441-26-88</a>
 							</li>
 						</ul>
+						<a href="/" class="workers__link link-under">
+							Все мастера в городе Ессентуки
+						</a>
 					</div>
 				</div>
 			</div>

@@ -1,9 +1,12 @@
 .search-container {
 	container-type: inline-size;
 	display: flex;
+	flex-wrap: wrap;
+	row-gap: #{rem(10)};
 	column-gap: 20px;
 	align-items: center;
 	position: relative;
+	max-width: 750px;
 
 	&_lonely {
 		flex-direction: column;
@@ -17,7 +20,7 @@
 	position: relative;
 	display: flex;
 	flex-grow: 1;
-	width: 100%;
+	min-width: 300px;
 
 	&__label {
 		display: flex;

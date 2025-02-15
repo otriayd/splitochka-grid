@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 20px;
 	@include fluid-text(16, 14);
 }
 
@@ -12,6 +12,12 @@
 	@container (min-width: 480px) {
 		flex-basis: auto;
 	}
+}
+
+.worker-zones__values {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .worker-zones__value {}

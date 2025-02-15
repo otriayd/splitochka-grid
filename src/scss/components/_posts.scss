@@ -1,42 +1,22 @@
 .posts {
-	display: grid;
-	grid-template-rows: auto #{rem(50)} auto #{rem(40)} auto;
-
-	&:has(.posts__title) {
-		grid-template-areas: "title"
-			"."
-			"link"
-			"."
-			"list";
-	}
-
-	&:has(.posts__header) {
-		grid-template-areas: "header"
-			"."
-			"list"
-			"."
-			"pagination";
-	}
+	display: flex;
+	flex-direction: column;
 
 	&__title {
-		grid-area: title;
+		margin-bottom: #{rem(20)};
 	}
 
-	&__header {
-		grid-area: header;
+	&__search-container {
+		margin-bottom: #{rem(40)};
 	}
 
 	&__pagination {
-		grid-area: pagination;
+		margin-top: #{rem(40)};
 	}
 
 	&__link {
-		grid-area: link;
-		justify-content: center;
-
-		@container (min-width: 1004px) {
-			justify-self: start;
-		}
+		justify-self: start;
+		margin-bottom: #{rem(20)};
 	}
 
 	&__list {
@@ -48,20 +28,67 @@
 		@container (min-width: 1004px) {
 			margin: -10px -10px;
 		}
+	}
 
-		&-item {
-			width: calc(100% / 2 * 1 - 20px);
+	&__item {
+		width: calc(100% / 2 * 1 - 20px);
+		margin: 10px 10px;
+
+		@container (min-width: 680px) {
+			width: calc(100% / 3 * 1 - 20px);
 			margin: 10px 10px;
+		}
 
-			@container (min-width: 680px) {
-				width: calc(100% / 3 * 1 - 20px);
-				margin: 10px 10px;
-			}
+		@container (min-width: 1200px) {
+			width: calc(100% / 4 * 1 - 20px);
+			margin: 10px 10px;
+		}
+	}
+}
 
-			@container (min-width: 1200px) {
-				width: calc(100% / 4 * 1 - 20px);
-				margin: 10px 10px;
+.post {
+	@include hover {
+		&:hover {
+			.post__img {
+				transform: scale(1.1);
 			}
 		}
 	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__data {
+		padding-inline: 10px;
+	}
+
+	&__pic {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1/0.663;
+		border-radius: var(--border-radius_min);
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.2s ease-out;
+	}
+
+	&__time {
+		@include fluid-text(14, 14);
+		display: block;
+		padding-block: #{rem(10)};
+		border-bottom: 1px solid var(--border-color-dark);
+	}
+
+	&__title {
+		margin-top: #{rem(10)};
+	}
+
+
 }

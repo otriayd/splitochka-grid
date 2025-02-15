@@ -1,29 +1,18 @@
 .services {
-	&:has(.services__title) {
-		display: grid;
-		grid-template-rows: auto #{rem(40)} auto;
-		grid-template-areas: "title"
-			"."
-			"list";
-	}
-
-	&:not(:has(.services__title)) {
-		display: grid;
-		grid-template-areas: "list";
-	}
+	display: flex;
+	flex-direction: column;
 
 	&__title {
-		grid-area: title;
+		margin-bottom: #{rem(40)};
 	}
 
 	&__list {
-		grid-area: list;
 		display: flex;
 		flex-wrap: wrap;
 		margin: -10px -10px;
 	}
 
-	&__list-item {
+	&__item {
 		margin: 10px 10px;
 		width: calc(100% / 1 * 1 - 20px);
 
@@ -31,8 +20,36 @@
 			width: calc(100% / 2 * 1 - 20px);
 		}
 
-		@container (min-width: 1004px) {
+		@container (min-width: 767px) {
+			width: calc(100% / 3 * 1 - 20px);
+		}
+
+		@container (min-width: 1200px) {
 			width: calc(100% / 4 * 1 - 20px);
 		}
+	}
+}
+
+.service {
+	display: flex;
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
+	transition: border 0.3s ease-out;
+
+	@include hover {
+		border-color: #000;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding: 20px;
+	}
+
+	&__icon {}
+
+	&__title {
+		@include fluid-text(16, 16);
 	}
 }

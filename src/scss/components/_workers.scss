@@ -1,67 +1,110 @@
 .workers {
-	display: grid;
-	grid-template-rows: auto #{rem(30)} auto #{rem(30)} auto;
-
-	@container (min-width: 768px) {
-		grid-template-rows: auto #{rem(40)} auto #{rem(40)} auto #{rem(40)} auto;
-	}
-
-	&:has(.workers__title) {
-		grid-template-areas: "title"
-			"."
-			"cities"
-			"."
-			"list"
-			"."
-			"link";
-	}
-
-	&:has(.workers__header) {
-		grid-template-areas: "header"
-			"."
-			"list"
-			"."
-			"pagination";
-	}
+	display: flex;
+	flex-direction: column;
 
 	&__title {
-		grid-area: title;
-	}
-
-	&__link {
-		grid-area: link;
-		justify-self: start;
+		margin-bottom: #{rem(40)};
 	}
 
 	&__choice-city {
-		grid-area: cities;
+		margin-bottom: #{rem(40)};
+	}
+
+	&__header__sort-filter {
+		margin-bottom: #{rem(40)};
 	}
 
 	&__list {
-		grid-area: list;
 		display: flex;
 		flex-wrap: wrap;
 		margin: -5px -5px;
 
-		@container (min-width: 1004px) {
+		@container (min-width: 580px) {
 			margin: -10px -10px;
-		}
-
-		&-item {
-			width: calc(100% / 2 * 1 - 10px);
-			margin: 5px 5px;
-			border-radius: var(--border-radius_min);
-
-			@container (min-width: 580px) {
-				width: calc(100% / 3 * 1 - 10px);
-			}
-
-			@container (min-width: 1004px) {
-				width: calc(100% / 4 * 1 - 20px);
-				margin: 10px 10px;
-			}
 		}
 	}
 
+	&__link {
+		margin-top: #{rem(40)};
+		align-self: start;
+	}
 
+	&__pagination {
+		margin-top: #{rem(40)};
+	}
+
+	&__item {
+		width: calc(100% / 2 * 1 - 10px);
+		margin: 5px 5px;
+
+		@container (min-width: 580px) {
+			width: calc(100% / 3 * 1 - 20px);
+			margin: 10px 10px;
+		}
+
+		@container (min-width: 1004px) {
+			width: calc(100% / 4 * 1 - 20px);
+		}
+	}
+}
+
+.worker {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
+	transition: border var(--transition-duration) ease;
+
+	@include hover {
+		border: 1px solid var(--text-color-base);
+
+		.worker__img {
+			transform: scale(1.1);
+		}
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__data {
+		padding-inline: 10px;
+		margin-top: #{rem(20)};
+		display: flex;
+		flex-direction: column;
+		row-gap: #{rem(10)};
+	}
+
+	&__pic {
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease-out;
+	}
+
+	&__title {
+		@include fluid-text(14, 12);
+	}
+
+	&__name {
+		@include fluid-text(18, 14);
+	}
+
+	&__rating-result {
+		display: flex;
+		flex-wrap: wrap;
+		@include fluid-text(14, 14);
+	}
+
+	&__phone {
+		margin-top: #{rem(20)};
+		margin-inline: 10px;
+		align-self: start;
+	}
 }

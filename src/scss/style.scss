@@ -22,7 +22,7 @@
 @import "./components/logo";
 @import "./components/_title";
 @import "./components/_icon";
-@import "./components/city-form";
+@import "./components/_global-city-choice";
 @import "./components/button-link";
 @import "./components/form-add-to-cart";
 @import "./components/link-under";
@@ -59,41 +59,27 @@
 @import "./pages/404-page";
 @import "./pages/privacy-page";
 @import "./pages/cart-page";
-
-
-
-
 @import "./components/pagination";
 @import "./components/category-list";
 @import "./components/category-w-img";
 @import "./components/brend-category";
 
 @import "./components/posts";
-@import "./components/post";
 
 @import "./components/breakdowns";
-@import "./components/breakdown";
 
 @import "./components/slide";
 
 @import "./components/products";
-@import "./components/product";
 
 @import "./components/advantages";
-@import "./components/advantage";
 
 @import "./components/about";
 
 @import "./components/errors";
-@import "./components/lists";
-@import "./components/error";
 
 @import "./components/services";
-@import "./components/service";
 
 @import "./components/workers";
-@import "./components/worker";
-@import "./components/worker-line";
-
 
 @import "./parts/footer";
