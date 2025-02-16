@@ -1,7 +1,5 @@
 .search-container {
-	container-type: inline-size;
 	display: flex;
-	flex-wrap: wrap;
 	row-gap: #{rem(10)};
 	column-gap: 20px;
 	align-items: center;
@@ -34,7 +32,7 @@
 	}
 
 	&__field {
-		border-radius: var(--border-radius_mid);
+		border-radius: var(--border-radius_min);
 		border: 1px solid var(--border-color-dark);
 		height: #{rem(40)};
 		width: 100%;

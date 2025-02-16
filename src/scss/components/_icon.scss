@@ -1,7 +1,8 @@
 .icon {
 	display: flex;
 	align-items: center;
-	border-radius: var(--border-radius_mid);
+	position: relative;
+	border-radius: var(--border-radius_min);
 	line-height: 100%;
 	transition: background-color var(--transition-duration) ease, border var(--transition-duration) ease;
 
@@ -36,6 +37,23 @@
 			width: #{rem(40)};
 			height: #{rem(40)};
 		}
+	}
+
+	&__data {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translate(50%, -50%);
+		color: var(--bg-light-color);
+		background-color: var(--bg-dark-color);
+		border-radius: 50%;
+
+		@include fluid-text(12, 12);
 	}
 
 	&_w-border {

@@ -1,34 +1,48 @@
 <header id="header" class="site__header header">
 	<div class="header__mob-header mob-header">
-		<div class="mob-header__logo-block logo-block">
-			<a href="/home.html" class="logo-block__logo logo logo_light">Сплиточка.ру</a>
+		<div class="mob-header__top">
+			<div class="mob-header__logo-block logo-block">
+				<a href="/home.html" class="logo-block__logo logo logo_light">Сплиточка.ру</a>
+			</div>
+			<div class="mob-header__global-city-choice global-city-choice global-city-choice_light">
+				<p class="global-city-choice__item global-city-choice__item_current">Ессентуки</p>
+				<ul class="global-city-choice__list">
+					<li class="global-city-choice__item">
+						<a href="/" class="global-city-choice__item-link">Пятигорск</a>
+					</li>
+					<li class="global-city-choice__item">
+						<a href="/" class="global-city-choice__item-link">Кисловодск</a>
+					</li>
+					<li class="global-city-choice__item">
+						<a href="/" class="global-city-choice__item-link">Мин.Воды</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="mob-header__city-form city-form">
-			<select name="city-form" class="city-form__select">
-				<option class="city-form__option" value="Пятигорск">Пятигорск</option>
-				<option class="city-form__option" value="Ессентуки">Ессентуки</option>
-				<option class="city-form__option" value="Кисловодск">Кисловодск</option>
-			</select>
-		</div>
-		<button class="mob-header__menu-button menu-button icon icon_w-border icon_squire icon_squire-min"
-			aria-label="кнопка мобильного меню">
-			<svg class="icon__svg" width="20" height="15" xmlns="http://www.w3.org/2000/svg">
-				<path d="M0 0h20v3H0zM0 6h20v3H0zM0 12h20v3H0z" />
-			</svg>
-		</button>
-		<div class="mob-header__data-panel data-panel">
-			<a href="/" class="mob-header__cart-icon cart-icon icon icon_w-border icon_squire icon_squire-min">
-				<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M18.778 3.66a.298.298 0 0 0-.226-.104H4.446L3.87 1.628a.3.3 0 0 0-.287-.213H1.378a.299.299 0 1 0 0 .598h1.983L6.995 14.19l.002.004.452 1.535a1.557 1.557 0 0 0-.462 1.108c0 .863.702 1.565 1.564 1.565.835 0 1.517-.66 1.559-1.485h3.918l-.002.033c0 .862.701 1.563 1.563 1.563s1.564-.701 1.564-1.563c0-.863-.702-1.564-1.564-1.564-.637 0-1.186.384-1.429.933h-4.136a1.555 1.555 0 0 0-1.472-1.046c-.206 0-.401.041-.58.113l-.29-.983h9.302a.299.299 0 0 0 .295-.254L18.847 3.9a.299.299 0 0 0-.069-.24zM15.59 15.985a.967.967 0 0 1 0 1.932.967.967 0 0 1 0-1.932zm-7.038-.112c.258 0 .5.1.682.282a.967.967 0 0 1-.682 1.65.967.967 0 0 1 0-1.933zm8.176-2.066h-9.22l-.566-1.923a.297.297 0 0 0-.03-.068L4.624 4.154h13.58l-1.477 9.652z" />
+		<div class="mob-header__bottom">
+			<button class="mob-header__menu-button menu-button icon icon_w-border icon_squire icon_squire-min"
+				aria-label="кнопка мобильного меню">
+				<svg class="icon__svg" width="20" height="15" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 0h20v3H0zM0 6h20v3H0zM0 12h20v3H0z" />
 				</svg>
-			</a>
-			<a href="/" class="mob-header__account-icon account-icon icon icon_w-border icon_squire icon_squire-min">
-				<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M10.319 10.815c-3.998 0-7.25 3.373-7.25 7.52 0 .165.134.3.299.3h13.901a.299.299 0 0 0 .299-.3c0-4.147-3.252-7.52-7.25-7.52zm-6.646 7.221c.151-3.679 3.074-6.624 6.646-6.624 3.571 0 6.494 2.945 6.645 6.624H3.674zM10.193 9.993c2.306 0 4.181-1.941 4.181-4.327s-1.875-4.328-4.18-4.328c-2.306 0-4.182 1.942-4.182 4.328s1.876 4.327 4.181 4.327zm0-8.057c1.976 0 3.584 1.673 3.584 3.73 0 2.056-1.608 3.73-3.584 3.73S6.61 7.721 6.61 5.665c0-2.057 1.607-3.73 3.583-3.73z" />
-				</svg>
-			</a>
+			</button>
+			<div class="mob-header__data-panel data-panel">
+				<a href="/" class="mob-header__cart-icon cart-icon icon icon_w-border icon_squire icon_squire-min">
+					<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M18.778 3.66a.298.298 0 0 0-.226-.104H4.446L3.87 1.628a.3.3 0 0 0-.287-.213H1.378a.299.299 0 1 0 0 .598h1.983L6.995 14.19l.002.004.452 1.535a1.557 1.557 0 0 0-.462 1.108c0 .863.702 1.565 1.564 1.565.835 0 1.517-.66 1.559-1.485h3.918l-.002.033c0 .862.701 1.563 1.563 1.563s1.564-.701 1.564-1.563c0-.863-.702-1.564-1.564-1.564-.637 0-1.186.384-1.429.933h-4.136a1.555 1.555 0 0 0-1.472-1.046c-.206 0-.401.041-.58.113l-.29-.983h9.302a.299.299 0 0 0 .295-.254L18.847 3.9a.299.299 0 0 0-.069-.24zM15.59 15.985a.967.967 0 0 1 0 1.932.967.967 0 0 1 0-1.932zm-7.038-.112c.258 0 .5.1.682.282a.967.967 0 0 1-.682 1.65.967.967 0 0 1 0-1.933zm8.176-2.066h-9.22l-.566-1.923a.297.297 0 0 0-.03-.068L4.624 4.154h13.58l-1.477 9.652z" />
+					</svg>
+				</a>
+				<a href="/" class="mob-header__account-icon account-icon icon icon_w-border icon_squire icon_squire-min">
+					<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M10.319 10.815c-3.998 0-7.25 3.373-7.25 7.52 0 .165.134.3.299.3h13.901a.299.299 0 0 0 .299-.3c0-4.147-3.252-7.52-7.25-7.52zm-6.646 7.221c.151-3.679 3.074-6.624 6.646-6.624 3.571 0 6.494 2.945 6.645 6.624H3.674zM10.193 9.993c2.306 0 4.181-1.941 4.181-4.327s-1.875-4.328-4.18-4.328c-2.306 0-4.182 1.942-4.182 4.328s1.876 4.327 4.181 4.327zm0-8.057c1.976 0 3.584 1.673 3.584 3.73 0 2.056-1.608 3.73-3.584 3.73S6.61 7.721 6.61 5.665c0-2.057 1.607-3.73 3.583-3.73z" />
+					</svg>
+				</a>
+			</div>
+
 		</div>
 		<div class="mob-header__mob-menu mob-menu">
 			<div class="mob-menu__content">
@@ -96,128 +110,127 @@
 			<p class="logo-block__description">продажа и обслуживание кондиционеров и сплит-систем</p>
 		</div>
 		<div class="desctop-header__top header-top">
-			<div class="header-top__left">
-				<div class="header-top__catalog catalog">
-					<a href="/" class="catalog__link catalog-link">
-						<svg class="icon__svg" width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0 0h20v3H0zM0 6h20v3H0zM0 12h20v3H0z" />
-						</svg>
-						Каталог</a>
-					<div class="catalog__categorys-w-img-container">
-						<div class="catalog__categorys-w-img categorys-w-img">
-							<ul class="category-list">
-								<li class="category-list__item category-list__item_5">
-									<a href="/products.html" class="category-w-img category-w-img_w-bg">
-										<h2 class="category-w-img__title title">Настенные</h2>
-										<picture class="category-w-img__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
-												srcset="@img/products-category-w-img/products-category-w-img-item-1.webp">
-											<img src="@img/products-category-w-img/products-category-w-img-item-1.webp" width="171"
-												height="113" alt="Анимационная фигура" class="category-w-img__img">
-										</picture>
-									</a>
-								</li>
-								<li class="category-list__item category-list__item_5">
-									<a href="/products.html" class="category-w-img category-w-img_w-bg">
-										<h2 class="category-w-img__title title">Напольные</h2>
-										<picture class="category-w-img__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
-												srcset="@img/products-category-w-img/products-category-w-img-item-2.webp">
-											<img src="@img/products-category-w-img/products-category-w-img-item-2.webp" width="171"
-												height="113" alt="Анимационная фигура" class="category-w-img__img">
-										</picture>
-									</a>
-								</li>
-								<li class="category-list__item category-list__item_5">
-									<a href="/products.html" class="category-w-img category-w-img_w-bg">
-										<h2 class="category-w-img__title title">Оконные</h2>
-										<picture class="category-w-img__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
-												srcset="@img/products-category-w-img/products-category-w-img-item-3.webp">
-											<img src="@img/products-category-w-img/products-category-w-img-item-3.webp" width="171"
-												height="113" alt="Анимационная фигура" class="category-w-img__img">
-										</picture>
-									</a>
-								</li>
-								<li class="category-list__item category-list__item_5">
-									<a href="/products.html" class="category-w-img category-w-img_w-bg">
-										<h2 class="category-w-img__title title">Сплит-системы</h2>
-										<picture class="category-w-img__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
-												srcset="@img/products-category-w-img/products-category-w-img-item-4.webp">
-											<img src="@img/products-category-w-img/products-category-w-img-item-4.webp" width="171"
-												height="113" alt="Анимационная фигура" class="category-w-img__img">
-										</picture>
-									</a>
-								</li>
-								<li class="category-list__item category-list__item_5">
-									<a href="/products.html" class="category-w-img category-w-img_w-border">
-										<h2 class="category-w-img__title title">Расходные материалы</h2>
-										<picture class="category-w-img__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
-												srcset="@img/products-category-w-img/products-category-w-img-item-5.webp">
-											<img src="@img/products-category-w-img/products-category-w-img-item-5.webp" width="171"
-												height="113" alt="Анимационная фигура" class="category-w-img__img">
-										</picture>
-									</a>
-								</li>
-							</ul>
-						</div>
+			<div class="header-top__catalog catalog">
+				<a href="/" class="catalog__link catalog-link">
+					<svg class="icon__svg" width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0h20v3H0zM0 6h20v3H0zM0 12h20v3H0z" />
+					</svg>
+					Каталог</a>
+				<div class="catalog__categorys-w-img-container">
+					<div class="catalog__categorys-w-img categorys-w-img">
+						<ul class="category-list">
+							<li class="category-list__item category-list__item_5">
+								<a href="/products.html" class="category-w-img category-w-img_w-bg">
+									<h2 class="category-w-img__title title">Настенные</h2>
+									<picture class="category-w-img__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
+											srcset="@img/products-category-w-img/products-category-w-img-item-1.webp">
+										<img src="@img/products-category-w-img/products-category-w-img-item-1.webp" width="171"
+											height="113" alt="Анимационная фигура" class="category-w-img__img">
+									</picture>
+								</a>
+							</li>
+							<li class="category-list__item category-list__item_5">
+								<a href="/products.html" class="category-w-img category-w-img_w-bg">
+									<h2 class="category-w-img__title title">Напольные</h2>
+									<picture class="category-w-img__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
+											srcset="@img/products-category-w-img/products-category-w-img-item-2.webp">
+										<img src="@img/products-category-w-img/products-category-w-img-item-2.webp" width="171"
+											height="113" alt="Анимационная фигура" class="category-w-img__img">
+									</picture>
+								</a>
+							</li>
+							<li class="category-list__item category-list__item_5">
+								<a href="/products.html" class="category-w-img category-w-img_w-bg">
+									<h2 class="category-w-img__title title">Оконные</h2>
+									<picture class="category-w-img__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
+											srcset="@img/products-category-w-img/products-category-w-img-item-3.webp">
+										<img src="@img/products-category-w-img/products-category-w-img-item-3.webp" width="171"
+											height="113" alt="Анимационная фигура" class="category-w-img__img">
+									</picture>
+								</a>
+							</li>
+							<li class="category-list__item category-list__item_5">
+								<a href="/products.html" class="category-w-img category-w-img_w-bg">
+									<h2 class="category-w-img__title title">Сплит-системы</h2>
+									<picture class="category-w-img__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
+											srcset="@img/products-category-w-img/products-category-w-img-item-4.webp">
+										<img src="@img/products-category-w-img/products-category-w-img-item-4.webp" width="171"
+											height="113" alt="Анимационная фигура" class="category-w-img__img">
+									</picture>
+								</a>
+							</li>
+							<li class="category-list__item category-list__item_5">
+								<a href="/products.html" class="category-w-img category-w-img_w-border">
+									<h2 class="category-w-img__title title">Расходные материалы</h2>
+									<picture class="category-w-img__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="171" height="113"
+											srcset="@img/products-category-w-img/products-category-w-img-item-5.webp">
+										<img src="@img/products-category-w-img/products-category-w-img-item-5.webp" width="171"
+											height="113" alt="Анимационная фигура" class="category-w-img__img">
+									</picture>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="header-top__global-city-choice global-city-choice">
-					<p class="global-city-choice__item global-city-choice__item_current">Ессентуки</p>
-					<ul class="global-city-choice__list">
-						<li class="global-city-choice__item">
-							<a href="/" class="global-city-choice__item-link">Пятигорск</a>
-						</li>
-						<li class="global-city-choice__item">
-							<a href="/" class="global-city-choice__item-link">Кисловодск</a>
-						</li>
-						<li class="global-city-choice__item">
-							<a href="/" class="global-city-choice__item-link">Мин.Воды</a>
-						</li>
-					</ul>
-				</div>
-				<div class="header-top__search-container search-container">
-					<form action="/" class="search-container__search-form search-form" method="get">
-						<input type="text" class="search-form__field" placeholder="Поиск">
-						<button type="submit" class="search-form__submit" aria-label="Искать">
-							<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none" viewBox="0 0 20 20"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="m18.125 17.241-4.72-4.72a6.886 6.886 0 1 0-.884.884l4.72 4.72.884-.884zM2.5 8.125a5.625 5.625 0 1 1 5.625 5.625A5.631 5.631 0 0 1 2.5 8.125z" />
-							</svg>
-						</button>
-						<div class="search-form__search-result-block search-result-block search-result-block_w-bg">
-							<ul class="search-result-block__search-result search-result">
-								<li class="search-result__item">
-									<a href="/post.html" class="search-result-component search-result-component_min">
-										<picture class="search-result-component__pic">
-											<source media="(min-width: 1025px)" type="image/webp" width="959" height="839"
-												srcset="@img/posts/posts-item-1.webp">
-											<img src="@img/posts/posts-item-1.webp" width="375" height="397"
-												alt="Анимационная фигура" class="search-result-component__img">
-										</picture>
-										<h2 class="search-result-component__title title search-result-component__title_min">
-											Не включается кондиционер
-										</h2>
-										<div class="search-result-component__excerpt search-result-component__excerpt_min">
-											<p>необязательное краткое изложение или описание записи, одним словом, её анонс</p>
-										</div>
-									</a>
-								</li>
+			</div>
+			<div class="header-top__global-city-choice global-city-choice global-city-choice_dark">
+				<p class="global-city-choice__item global-city-choice__item_current">Ессентуки</p>
+				<ul class="global-city-choice__list">
+					<li class="global-city-choice__item">
+						<a href="/" class="global-city-choice__item-link">Пятигорск</a>
+					</li>
+					<li class="global-city-choice__item">
+						<a href="/" class="global-city-choice__item-link">Кисловодск</a>
+					</li>
+					<li class="global-city-choice__item">
+						<a href="/" class="global-city-choice__item-link">Мин.Воды</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-top__search-container search-container">
+				<form action="/" class="search-form" method="get">
+					<input type="text" class="search-form__field" placeholder="Поиск">
+					<button type="submit" class="search-form__submit" aria-label="Искать">
+						<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="m18.125 17.241-4.72-4.72a6.886 6.886 0 1 0-.884.884l4.72 4.72.884-.884zM2.5 8.125a5.625 5.625 0 1 1 5.625 5.625A5.631 5.631 0 0 1 2.5 8.125z" />
+						</svg>
+					</button>
+					<div class="search-form__search-result-block search-result-block search-result-block_w-bg">
+						<ul class="search-result-block__search-result search-result">
+							<li class="search-result__item">
+								<a href="/post.html" class="search-result-component search-result-component_min">
+									<picture class="search-result-component__pic">
+										<source media="(min-width: 1025px)" type="image/webp" width="959" height="839"
+											srcset="@img/posts/posts-item-1.webp">
+										<img src="@img/posts/posts-item-1.webp" width="375" height="397" alt="Анимационная фигура"
+											class="search-result-component__img">
+									</picture>
+									<h2 class="search-result-component__title title search-result-component__title_min">
+										Не включается кондиционер
+									</h2>
+									<div class="search-result-component__excerpt search-result-component__excerpt_min">
+										<p>необязательное краткое изложение или описание записи, одним словом, её анонс</p>
+									</div>
+								</a>
+							</li>
 
-							</ul>
-							<div class="search-result-block__note">
-								<p>Если результатов поиска не достаточно нажмите искать, там больше результатов</p>
-							</div>
+						</ul>
+						<div class="search-result-block__note">
+							<p>Если результатов поиска не достаточно нажмите искать, там больше результатов</p>
 						</div>
-					</form>
-				</div>
+					</div>
+				</form>
 			</div>
 			<div class="header-top__data-panel data-panel">
 				<a href="/" class="cart-icon icon icon_w-border icon_squire icon_squire-min" aria-label="корзина">
+					<span class="icon__data">2</span>
 					<svg class="icon__svg icon__svg_min" width="20" height="20" fill="none" viewBox="0 0 20 20"
 						xmlns="http://www.w3.org/2000/svg">
 						<path

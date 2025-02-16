@@ -1,49 +1,39 @@
 .mob-header {
-	display: grid;
-	grid-template-columns: var(--global-padding-x) minmax(10px, 365px) 10px minmax(10px, 365px) 10px minmax(10px, 365px) 10px minmax(10px, 365px) var(--global-padding-x);
-	grid-template-rows: #{rem(10)} auto #{rem(10)} #{rem(20)} auto #{rem(20)};
-	grid-template-areas: ". . . . . . . . ."
-		". logo logo logo . city-form city-form city-form ."
-		". . . . . . . . ."
-		". . . . . . . . ."
-		". menu-button . . . data-panel data-panel data-panel ."
-		". . . . . . . . .";
+	display: flex;
+	flex-direction: column;
 	position: relative;
 
-	&::before {
-		grid-row: 1/4;
-		grid-column: 1/-1;
+	&__top {
 		display: flex;
-		content: "";
+		flex-wrap: wrap;
+		justify-content: space-between;
 		background-color: var(--bg-dark-color);
+		padding-inline: var(--global-padding-x);
+		padding-block: #{rem(10)};
 	}
 
-	&::after {
-		grid-row: 4/-1;
-		grid-column: 1/-1;
+	&__bottom {
 		display: flex;
-		content: "";
+		flex-wrap: wrap;
+		justify-content: space-between;
 		background-color: #fff;
-		z-index: 1;
+		padding-inline: var(--global-padding-x);
+		padding-block: #{rem(10)};
 	}
 
 	&__logo-block {
-		grid-area: logo;
 		justify-self: start;
 	}
 
-	&__city-form {
-		grid-area: city-form;
+	&__global-city-choice {
 		justify-self: end;
 	}
 
 	&__menu-button {
-		grid-area: menu-button;
 		z-index: 2;
 	}
 
 	&__data-panel {
-		grid-area: data-panel;
 		justify-self: end;
 		z-index: 2;
 	}
@@ -145,33 +135,32 @@
 
 .header-top {
 	position: relative;
-	display: grid;
-	grid-template-columns: auto #{rem(20)} auto #{rem(20)} minmax(100px, 470px) #{rem(20)} 1fr auto;
-	grid-template-areas: "left left left left left . . data-panel";
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
 
-	&__left {
-		position: relative;
-		grid-area: left;
-		display: grid;
-		grid-template-columns: auto 20px auto 20px minmax(100px, 470px);
-		grid-template-areas: "catalog . city . search . . data-panel";
+	&::before {
+		display: flex;
+		flex-grow: 1;
+		order: 4;
+		content: "";
 	}
 
 	&__catalog-block {
-		grid-area: catalog;
-		justify-self: start;
+		order: 1;
 	}
 
 	&__global-city-choice {
-		grid-area: city;
+		order: 2;
 	}
 
 	&__search-container {
-		grid-area: search;
+		flex-basis: 500px;
+		order: 3;
 	}
 
 	&__data-panel {
-		grid-area: data-panel;
+		order: 5;
 	}
 }
 
@@ -218,7 +207,7 @@
 	padding-inline: 20px;
 	white-space: nowrap;
 	column-gap: 10px;
-	border-radius: var(--border-radius_mid);
+	border-radius: var(--border-radius_min);
 	border: 1px solid var(--border-color-dark);
 	@include fluid-text(14, 14);
 	font-family: var(--font-family-base-medium);
@@ -263,7 +252,6 @@
 }
 
 .phones {
-
 	display: flex;
 	flex-wrap: wrap;
 	gap: #{rem(30)} 20px;

@@ -8,8 +8,20 @@
 	z-index: 100;
 	padding-inline: 20px;
 	border-radius: var(--border-radius_min);
-	border: 1px solid var(--border-color-dark);
 	min-width: 150px;
+
+	&_dark {
+		border: 1px solid var(--border-color-dark);
+	}
+
+	&_light {
+		border: 1px solid var(--bg-light-color);
+
+		.global-city-choice__item_current {
+			color: var(--bg-light-color);
+		}
+
+	}
 
 	@include hover {
 		.global-city-choice__list {
