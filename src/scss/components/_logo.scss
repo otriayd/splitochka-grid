@@ -1,18 +1,9 @@
 .logo-block {
-	display: grid;
-
-	&:has(.logo-block__description) {
-		grid-template-rows: auto #{rem(20)} auto;
-		grid-template-areas: "logo"
-			"."
-			"description";
-	}
-
 	&__description {
-		grid-area: description;
 		@include fluid-text(12, 12);
 		max-width: 190px;
 		line-height: 100%;
+		margin-top: #{rem(20)};
 
 		&_light {
 			color: var(--text-color-maxlight);
@@ -20,7 +11,6 @@
 	}
 
 	&__logo {
-		grid-area: logo;
 		justify-self: start;
 	}
 }

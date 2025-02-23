@@ -7,12 +7,12 @@
 	<div class="site">
 		@@include('html/parts/header-w-aside.html')
 		@@include('html/parts/aside.html')
-		<main id="main" class="site__main main main_near-aside main_light worker-page page">
-			<article class="page__main page__main_w-aside">
-				<header class="page__main-header">
-					<h1 class="page__main-header-title title title_h1">Мастер по ремонту кондиционеров Иван</h1>
-					<div class="page__main-header-content">
-						<div class="worker__rating-result rating-result">
+		<main id="main" class="site__main main">
+			<div class="page worker-page page_narrow">
+				<article class="article">
+					<header class="article__header">
+						<h1 class="article__title title title_h1">Мастер по ремонту кондиционеров Иван</h1>
+						<div class="worker-page__rating-result rating-result">
 							<div class="rating-result__list">
 								<span class="rating-result__item">★</span>
 								<span class="rating-result__item">★</span>
@@ -21,249 +21,249 @@
 							</div>
 							23 отзыва
 						</div>
-					</div>
-				</header>
-				<div class="page__main-content">
-					<dl class="worker-page__worker-data worker-data">
-						<div class="worker-data__item">
-							<dt class="worker-data__item-key">Опыт работы:</dt>
-							<dd class="worker-data__item-value"><strong>15 лет</strong></dd>
+					</header>
+					<picture class="article__pic">
+						<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+							srcset="@img/workers/worker-1.webp">
+						<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
+							alt="Анимационная фигура" class="article__img">
+					</picture>
+					<div class="article__content">
+						<dl class="worker-page__worker-data worker-data">
+							<div class="worker-data__item">
+								<dt class="worker-data__item-key">Опыт работы:</dt>
+								<dd class="worker-data__item-value"><strong>15 лет</strong></dd>
+							</div>
+							<div class="worker-data__item">
+								<dt class="worker-data__item-key">Email:</dt>
+								<dd class="worker-data__item-value"><strong>dmitryrassokhin@yandex.ru</strong></dd>
+							</div>
+						</dl>
+						<div class="worker-page__worker-tools worker-tools">
+							<a href="/" class="product-component__button action-button">+7 905 441-26-88</a>
+							<a href="/"
+								class="button-link button-link_w-border button-link_squire">dmitryrassokhin@yandex.ru</a>
 						</div>
-						<div class="worker-data__item">
-							<dt class="worker-data__item-key">Email:</dt>
-							<dd class="worker-data__item-value"><strong>dmitryrassokhin@yandex.ru</strong></dd>
+						<dl class="worker-page__worker-zones worker-zones">
+							<dt class="worker-zones__key">Выезд:</dt>
+							<div class="worker-zones__values">
+								<dd class="worker-zones__value">
+									<a href="/" class="worker-zones__value-link tag-link">Ессентуки</a>
+								</dd>
+								<dd class="worker-zones__value">
+									<a href="/" class="worker-zones__value-link tag-link">Пятигорск</a>
+								</dd>
+								<dd class="worker-zones__value">
+									<a href="/" class="worker-zones__value-link tag-link">Мин.Воды</a>
+								</dd>
+							</div>
+						</dl>
+						<div class="worker-page__worker-description worker-description">
+							<p>Системы кондиционирования состоят из внутреннего и внешнего блока. Внешний блок необходимо
+								разместить в легкой доступности, иначе при установке или ремонте придётся вызывать автовышку.
+								Внутренний блок не должен мешать другим системам комуникаций. </p>
 						</div>
-					</dl>
-					<div class="worker-page__worker-tools worker-tools">
-						<a href="/" class="product-component__button action-button">+7 905 441-26-88</a>
-						<a href="/" class="button-link button-link_w-border button-link_squire">dmitryrassokhin@yandex.ru</a>
-					</div>
-					<dl class="worker-page__worker-zones worker-zones">
-						<dt class="worker-zones__key">Выезд:</dt>
-						<div class="worker-zones__values">
-							<dd class="worker-zones__value">
-								<a href="/" class="worker-zones__value-link tag-link">Ессентуки</a>
-							</dd>
-							<dd class="worker-zones__value">
-								<a href="/" class="worker-zones__value-link tag-link">Пятигорск</a>
-							</dd>
-							<dd class="worker-zones__value">
-								<a href="/" class="worker-zones__value-link tag-link">Мин.Воды</a>
-							</dd>
-						</div>
-					</dl>
-					<div class="worker-page__worker-description worker-description">
-						<p>Системы кондиционирования состоят из внутреннего и внешнего блока. Внешний блок необходимо
-							разместить в легкой доступности, иначе при установке или ремонте придётся вызывать автовышку.
-							Внутренний блок не должен мешать другим системам комуникаций. </p>
-					</div>
-					<section class="worker-page__reviews reviews">
-						<h2 class="reviews__title title title_h2">Отзывы</h2>
-						<button class="reviews__button button-link button-link_squire button-link_w-border">Оставить
-							отзыв</button>
+						<section class="worker-page__reviews reviews">
+							<div class="reviews__header">
+								<h2 class="reviews__title title title_h2">Отзывы</h2>
+								<button class="reviews__button button-link button-link_squire button-link_w-border">Оставить
+									отзыв</button>
+							</div>
+							<div class="reviews__add visually-hidden">
+								<form action="/" method="post" class="reviews__form reviews-form">
+									<fieldset class="reviews-form__rating">
+										<div class="reviews-form__items">
+											<input type="radio" class="rating-area__set-input" id="star-5" name="rating" value="5">
+											<label for="star-5" class="rating-area__set-label" title="Оценка «5»"></label>
+											<input type="radio" class="rating-area__set-input" id="star-4" name="rating" value="4">
+											<label for="star-4" class="rating-area__set-label" title="Оценка «4»"></label>
+											<input type="radio" class="rating-area__set-input" id="star-3" name="rating" value="3">
+											<label for="star-3" class="rating-area__set-label" title="Оценка «3»"></label>
+											<input type="radio" class="rating-area__set-input" id="star-2" name="rating" value="2">
+											<label for="star-2" class="rating-area__set-label" title="Оценка «2»"></label>
+											<input type="radio" class="rating-area__set-input" id="star-1" name="rating" value="1">
+											<label for="star-1" class="rating-area__set-label" title="Оценка «1»"></label>
+										</div>
+									</fieldset>
 
-						<div class="reviews__add">
-							<form action="/" method="post" class="reviews__rating-area rating-area">
-								<fieldset class="rating-area__set">
-									<div class="rating-area__items">
-										<input type="radio" class="rating-area__set-input" id="star-5" name="rating" value="5">
-										<label for="star-5" class="rating-area__set-label" title="Оценка «5»"></label>
-										<input type="radio" class="rating-area__set-input" id="star-4" name="rating" value="4">
-										<label for="star-4" class="rating-area__set-label" title="Оценка «4»"></label>
-										<input type="radio" class="rating-area__set-input" id="star-3" name="rating" value="3">
-										<label for="star-3" class="rating-area__set-label" title="Оценка «3»"></label>
-										<input type="radio" class="rating-area__set-input" id="star-2" name="rating" value="2">
-										<label for="star-2" class="rating-area__set-label" title="Оценка «2»"></label>
-										<input type="radio" class="rating-area__set-input" id="star-1" name="rating" value="1">
-										<label for="star-1" class="rating-area__set-label" title="Оценка «1»"></label>
-									</div>
-								</fieldset>
+									<textarea class="reviews-form__area" name="rating-area" id="text" rows="4"></textarea>
 
-								<textarea class="rating-area__set-area" name="rating-area" id="text" rows="4"></textarea>
-
-								<button class="rating-area__submit action-button">
-									Отправить
-								</button>
-							</form>
-						</div>
-						<div class="reviews__accordion accordion">
-							<details class="accordion__item">
-								<summary class="accordion__item-header">
-									<div class="accordion__item-header-top">
-										<span class="accordion__item-header-title">Евгений</span>
-										<time class="accordion__item-header-time" datetime="2018-07-07">06.06.2024</time>
-									</div>
-									<span class="accordion__item-header-rating-result rating-result">
-										<span class="rating-result__list">
-											<span class="rating-result__item">★</span>
-											<span class="rating-result__item">★</span>
-											<span class="rating-result__item">★</span>
+									<button class="reviews-form__submit action-button">
+										Отправить
+									</button>
+								</form>
+							</div>
+							<div class="reviews__accordion accordion">
+								<details class="accordion__item">
+									<summary class="accordion__item-header">
+										<div class="accordion__item-header-top">
+											<span class="accordion__item-header-title">Евгений</span>
+											<time class="accordion__item-header-time" datetime="2018-07-07">06.06.2024</time>
+										</div>
+										<span class="accordion__item-header-rating-result rating-result">
+											<span class="rating-result__list">
+												<span class="rating-result__item">★</span>
+												<span class="rating-result__item">★</span>
+												<span class="rating-result__item">★</span>
+											</span>
 										</span>
-									</span>
-								</summary>
-								<div class="accordion__item-content">
-									<p>Очень признательна за оперативную помощь в решении проблемы (течь из кондея). Мастер
-										приехал вовремя, сделал все быстро и аккуратно (после проведенной работы - чистота).
-										Рассказал о возможных проблемах (кондей в возрасте) + подсказал как правильно ухаживать,
-										чтобы все было в порядке. Очень вежливый, внимательный и спокойный мастер. Работа
-										выполнена качественно - кондей работает как новенький! Рекомендую</p>
-								</div>
-							</details>
-							<details class="accordion__item">
-								<summary class="accordion__item-header">
-									<div class="accordion__item-header-top">
-										<span class="accordion__item-header-title">Евгений</span>
-										<time class="accordion__item-header-time" datetime="2018-07-07">06.06.2024</time>
+									</summary>
+									<div class="accordion__item-content">
+										<p>Очень признательна за оперативную помощь в решении проблемы (течь из кондея). Мастер
+											приехал вовремя, сделал все быстро и аккуратно (после проведенной работы - чистота).
+											Рассказал о возможных проблемах (кондей в возрасте) + подсказал как правильно
+											ухаживать,
+											чтобы все было в порядке. Очень вежливый, внимательный и спокойный мастер. Работа
+											выполнена качественно - кондей работает как новенький! Рекомендую</p>
 									</div>
-									<span class="accordion__item-header-rating-result rating-result">
-										<span class="rating-result__list">
-											<span class="rating-result__item">★</span>
-											<span class="rating-result__item">★</span>
-											<span class="rating-result__item">★</span>
+								</details>
+								<details class="accordion__item">
+									<summary class="accordion__item-header">
+										<div class="accordion__item-header-top">
+											<span class="accordion__item-header-title">Евгений</span>
+											<time class="accordion__item-header-time" datetime="2018-07-07">06.06.2024</time>
+										</div>
+										<span class="accordion__item-header-rating-result rating-result">
+											<span class="rating-result__list">
+												<span class="rating-result__item">★</span>
+												<span class="rating-result__item">★</span>
+												<span class="rating-result__item">★</span>
+											</span>
 										</span>
-									</span>
-								</summary>
-								<div class="accordion__item-content">
-									<p>Очень признательна за оперативную помощь в решении проблемы (течь из кондея). Мастер
-										приехал вовремя, сделал все быстро и аккуратно (после проведенной работы - чистота).
-										Рассказал о возможных проблемах (кондей в возрасте) + подсказал как правильно ухаживать,
-										чтобы все было в порядке. Очень вежливый, внимательный и спокойный мастер. Работа
-										выполнена качественно - кондей работает как новенький! Рекомендую</p>
-								</div>
-							</details>
-						</div>
-					</section>
-				</div>
-				<picture class="page__main-pic">
-					<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-						srcset="@img/workers/worker-1.webp">
-					<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300" alt="Анимационная фигура"
-						class="page__main-img">
-				</picture>
-			</article>
-			<div class="page__footer">
-				<div class="worker-page__workers-container block-container">
-					<div class="workers">
-						<h2 class="workers__title title title_h2">Другие мастера по ремонту кондиционера в Ессентуках</h2>
-						<div class="workers__choice-city choice-city">
-							<p class="choice-city__title">Выберите мастеров из своего города:</p>
-							<ul class="choice-city__list">
-								<li class="choice-city__item choice-city__item_current">
-									<span class="tag-link">Ессентуки</span>
-								</li>
-								<li class="choice-city__item">
-									<a href="/" class="choice-city__item-link tag-link">Пятигорск</a>
-								</li>
-								<li class="choice-city__item">
-									<a href="/" class="choice-city__item-link tag-link">Кисловодск</a>
-								</li>
-								<li class="choice-city__item">
-									<a href="/" class="choice-city__item-link tag-link">Мин.воды</a>
-								</li>
-							</ul>
-						</div>
-						<ul class="workers__list">
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-1.webp">
-										<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
+									</summary>
+									<div class="accordion__item-content">
+										<p>Очень признательна за оперативную помощь в решении проблемы (течь из кондея). Мастер
+											приехал вовремя, сделал все быстро и аккуратно (после проведенной работы - чистота).
+											Рассказал о возможных проблемах (кондей в возрасте) + подсказал как правильно
+											ухаживать,
+											чтобы все было в порядке. Очень вежливый, внимательный и спокойный мастер. Работа
+											выполнена качественно - кондей работает как новенький! Рекомендую</p>
 									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+								</details>
+							</div>
+						</section>
+					</div>
+				</article>
+				<div class="worker-page__workers workers">
+					<h2 class="workers__title title title_h2">Другие мастера по ремонту кондиционера в Ессентуках</h2>
+					<div class="workers__choice-city choice-city">
+						<p class="choice-city__title">Выберите мастеров из своего города:</p>
+						<ul class="choice-city__list">
+							<li class="choice-city__item choice-city__item_current">
+								<span class="tag-link">Ессентуки</span>
 							</li>
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-2.webp">
-										<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+							<li class="choice-city__item">
+								<a href="/" class="choice-city__item-link tag-link">Пятигорск</a>
 							</li>
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-3.webp">
-										<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+							<li class="choice-city__item">
+								<a href="/" class="choice-city__item-link tag-link">Кисловодск</a>
 							</li>
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-4.webp">
-										<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+							<li class="choice-city__item">
+								<a href="/" class="choice-city__item-link tag-link">Мин.воды</a>
 							</li>
 						</ul>
-						<a href="/" class="workers__link link-under">
-							Все мастера в городе Ессентуки
-						</a>
 					</div>
+					<ul class="workers__list">
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-1.webp">
+									<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-2.webp">
+									<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-3.webp">
+									<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-4.webp">
+									<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+					</ul>
+					<a href="/" class="workers__link link-under">
+						Все мастера в городе Ессентуки
+					</a>
 				</div>
 			</div>
 		</main>

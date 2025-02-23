@@ -1,16 +1,21 @@
 .contacts {
-	display: grid;
-	justify-items: start;
-	gap: 20px;
-
 	&_light {
 		color: var(--text-color-minlight);
 	}
 
 	&__item {
+		&+& {
+			margin-top: #{rem(15)};
+		}
+
 		&:hover {
 			.icon {
-				filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.2));
+				border: 1px solid var(--bg-light-color);
+				background-color: transparent;
+
+				path {
+					fill: var(--bg-light-color);
+				}
 			}
 
 			.contacts__item-link {

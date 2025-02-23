@@ -1,11 +1,5 @@
 .worker-page {
-	&__worker-data {
-		margin-top: #{rem(20)};
-
-		@include mobile-above {
-			margin-top: #{rem(20)}
-		}
-	}
+	&__worker-data {}
 
 	&__worker-tools {
 		margin-top: #{rem(30)};
@@ -37,6 +31,10 @@
 		@include mobile-above {
 			margin-top: #{rem(60)}
 		}
+	}
+
+	&__workers {
+		margin-top: #{rem(80)}
 	}
 }
 

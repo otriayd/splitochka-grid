@@ -1,6 +1,5 @@
 .home-page {
-	&__categorys-w-img-container {
-		grid-column: 3/10;
+	&__categories-w-img-container {
 
 		@include tablet-above {
 			margin-top: #{rem(30)}

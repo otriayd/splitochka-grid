@@ -1,81 +1,47 @@
 .footer {
-	container-type: inline-size;
-	display: grid;
-	grid-template-columns: 30px 1fr 30px;
-	grid-template-rows: #{rem(100)} auto #{rem(30)} auto #{rem(60)} auto #{rem(40)} auto #{rem(40)} auto #{rem(30)} auto #{rem(100)};
-	grid-template-areas: ". . ."
-		". logo ."
-		". . ."
-		". nav ."
-		". . ."
-		". additional ."
-		". . ."
-		". contacts ."
-		". . ."
-		". social ."
-		". . ."
-		". copyright ."
-		". . .";
-
-	@container (min-width: 780px) {
-		grid-template-columns: 30px 1fr minmax(200px, auto) 1fr 30px;
-		grid-template-areas: ". . . . ."
-			". . logo . ."
-			". . . . ."
-			". . nav . ."
-			". . . . ."
-			". . additional . ."
-			". . . . ."
-			". . contacts . ."
-			". . . . ."
-			". . social . ."
-			". . . . ."
-			". . copyright . ."
-			". . . . .";
-	}
-
-	@include tablet-above {
-		grid-template-columns: 10px 1fr minmax(40px, 305px) 15px 65px minmax(40px, 365px) 20px minmax(40px, 365px) 20px minmax(auto, 365px) 1fr 10px;
-		grid-template-rows: #{rem(80)} auto #{rem(60)} auto #{rem(40)} 1fr auto #{rem(40)} auto #{rem(80)};
-		grid-template-areas: ". . . . . . . . . . . ."
-			". . logo . . nav nav nav . contacts . ."
-			". . logo . . . . . . contacts . ."
-			". . logo . . additional additional additional . contacts . ."
-			". . logo . . additional additional additional . . . ."
-			". . logo . . additional additional additional . social . ."
-			". . . . . additional additional additional . . . ."
-			". . . . . . . . . . . ."
-			". . . . . copyright copyright copyright . . . ."
-			". . . . . . . . . . . .";
-		align-items: start;
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		padding-top: #{rem(40)};
+		padding-bottom: #{rem(80)};
 	}
 
 	&_dark {
 		background-color: var(--bg-dark-color);
 	}
 
+	&__all-nav {
+		flex-grow: 1;
+	}
+
+	&__all-contacts {
+		margin-top: #{rem(40)};
+	}
+
 	&__logo-block {
-		grid-area: logo;
+		flex-basis: 365px;
+		align-self: start;
+		margin-top: #{rem(40)};
 	}
 
 	&__footer-nav {
-		grid-area: nav;
+		margin-top: #{rem(40)};
 	}
 
 	&__additional {
-		grid-area: additional;
+		margin-top: #{rem(40)};
 	}
 
-	&__contacts {
-		grid-area: contacts;
-	}
+	&__contacts {}
 
 	&__social {
-		grid-area: social;
+		margin-top: #{rem(40)};
 	}
 
 	&__copyright {
-		grid-area: copyright;
+		flex-basis: 100%;
+		margin-top: #{rem(60)};
 	}
 }
 

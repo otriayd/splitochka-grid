@@ -1,6 +1,13 @@
 .category-w-img {
 	border: 1px solid transparent;
 
+	&__link {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		row-gap: #{rem(10)};
+	}
+
 	@include hover {
 		border: 1px solid var(--hover-color);
 	}
@@ -13,24 +20,14 @@
 		border: 1px solid var(--border-color-dark);
 	}
 
-	display: grid;
-	grid-template-columns: 20px 1fr 20px;
-	grid-template-rows: #{rem(20)} 2.8ch #{rem(10)} 1fr #{rem(20)};
-	grid-template-areas: ". . ."
-	". title ."
-	". . ."
-	"pic pic pic"
-	". . .";
 	border-radius: var(--border-radius_min);
 
 	&__title {
-		grid-area: title;
 		@include fluid-text(14, 14);
+		min-height: 2.0em;
 	}
 
-	&__pic {
-		grid-area: pic;
-	}
+	&__pic {}
 
 	&__img {
 		width: 100%;

@@ -1,6 +1,4 @@
 .footer-nav {
-	container-type: inline-size;
-
 	&_light {
 		color: var(--text-color-minlight);
 	}
@@ -8,18 +6,12 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		flex-direction: column;
 		align-items: start;
 		gap: 20px;
-
-		@container (min-width: 400px) {
-			flex-direction: row;
-			gap: 30px;
-		}
 	}
 
 	&__item {
-		font-size: 14px;
+		@include fluid-text(14, 14);
 		font-family: var(--font-family-base-medium);
 		text-transform: uppercase;
 	}

@@ -1,13 +1,10 @@
 .brend-category {
 	display: flex;
 	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
 
-	&_w-border {
-		border: 1px solid var(--border-color-dark);
-
-		&:hover {
-			border-color: var(--hover-color);
-		}
+	@include hover {
+		border-color: var(--hover-color);
 	}
 
 	&__pic {

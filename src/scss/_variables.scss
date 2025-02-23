@@ -9,7 +9,7 @@
 	--text-color-base: #161616;
 	--text-color-maxlight: #ECECEC;
 	--text-color-minlight: #ABABAB;
-	--text-hover-color: #676767;
+	--text-hover-color: #ACACAC;
 
 	--accent-color: #7ECAC6;
 	--accent-button-color: #19708D;
@@ -31,9 +31,13 @@
 	--border-radius_mid: #{rem(6)};
 	--border-radius_min: #{rem(4)};
 
-	--container-width: 1920px;
+	--site-container-width: 1920px;
+	--container-width: 1520px;
 	--container-padding-x: 20px;
 	--global-padding-x: 10px;
+
+	--content-narrow: 750px;
+	--content-average: 1004px;
 
 	@include mobile-above {
 		--container-padding-x: 75px;

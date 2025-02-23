@@ -1,13 +1,16 @@
 .article-navigation {
-	&__list {
-		display: grid;
-		row-gap: #{rem(10)};
-	}
+	max-width: var(--content-narrow);
 
-	&__list-item {
+	&__list {}
+
+	&__item {
 		display: flex;
 		align-items: center;
 		gap: 10px;
+
+		&+& {
+			margin-top: #{rem(10)};
+		}
 
 		&::before {
 			display: flex;
@@ -20,6 +23,10 @@
 
 		&-link {
 			@include fluid-text(18, 14);
+
+			@include hover {
+				color: var(--text-hover-color);
+			}
 		}
 	}
 }

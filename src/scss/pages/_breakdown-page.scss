@@ -1,8 +1,4 @@
 .breakdown-page {
-	&__article-navigation {}
-
-	&__breakdowns-container {}
-
 	&__text-list {
 		margin-top: #{rem(40)};
 
@@ -11,11 +7,19 @@
 		}
 	}
 
-	&__workers-container {
+	&__workers {
 		margin-top: #{rem(50)};
 
 		@include tablet-above {
-			margin-top: #{rem(100)};
+			margin-top: #{rem(80)};
+		}
+	}
+
+	&__breakdowns {
+		margin-top: #{rem(50)};
+
+		@include tablet-above {
+			margin-top: #{rem(80)};
 		}
 	}
 }

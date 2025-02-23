@@ -23,14 +23,12 @@
 @import "./components/_title";
 @import "./components/_icon";
 @import "./components/_global-city-choice";
-@import "./components/button-link";
 @import "./components/form-add-to-cart";
 @import "./components/link-under";
 @import "./components/text-link";
 @import "./components/choice-city";
 @import "./components/numbered-text";
 @import "./components/action-button";
-@import "./components/archive-tools";
 @import "./components/sort-filter";
 @import "./components/products-filter";
 @import "./components/rating-result";
@@ -43,10 +41,14 @@
 @import "./components/article-navigation";
 
 @import "./parts/page";
+@import "./parts/article";
+@import "./parts/archive";
+
 @import "./pages/home-page";
 @import "./pages/post-page";
 @import "./pages/posts-page";
 @import "./pages/services-page";
+@import "./pages/service-page";
 @import "./pages/breakdowns-page";
 @import "./pages/breakdown-page";
 @import "./pages/errors-page";

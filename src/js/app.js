@@ -93,7 +93,7 @@ window.addEventListener('load', function () {
 	const reviewsAdd = document.querySelector('.reviews__add');
 	if (reviewsButton && reviewsAdd) {
 		reviewsButton.addEventListener('click', function () {
-			reviewsAdd.classList.toggle('reviews__add_active');
+			reviewsAdd.classList.toggle('visually-hidden');
 		});
 	}
 });

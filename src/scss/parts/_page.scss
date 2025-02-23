@@ -1,136 +1,17 @@
 .page {
-	padding-bottom: #{rem(60)};
-	grid-template-rows: auto auto 1fr;
+	container-type: inline-size;
 
-	@include tablet-above {
-		padding-bottom: #{rem(100)};
-	}
-
-	&__main {
-		grid-column: 2;
-		display: grid;
-		grid-template-columns: repeat(3, minmax(10px, 365px));
-		grid-template-rows: auto #{rem(30)} auto;
-		column-gap: 10px;
-		margin-top: #{rem(30)};
-
-		@include mobile-above {
-			grid-template-rows: auto #{rem(40)} auto;
-		}
+	&_narrow {
+		max-width: 1200px;
+		margin-top: #{rem(65)};
 
 		@include tablet-above {
-			grid-column: 2 / 7;
-			column-gap: 20px;
-			margin-top: #{rem(60)};
+			padding-left: 65px;
 		}
-
-		&_simple {
-			&:has(.page__main-content_column2) {
-				grid-template-areas: "header header header"
-					". . ."
-					"content content content";
-
-				@include mobile-above {
-					grid-template-areas: "header header ."
-						". . ."
-						"content content .";
-				}
-			}
-
-			&:has(.page__main-content_column3) {
-				grid-template-areas: "header header header"
-					". . ."
-					"content content content";
-
-				@include mobile-above {
-					grid-template-areas: "header header ."
-						". . ."
-						"content content content";
-				}
-			}
-		}
-
-		&_w-aside {
-			grid-template-rows: auto #{rem(30)} auto #{rem(30)} auto 1fr;
-			grid-template-areas: "header header header"
-				". . ."
-				"pic pic ."
-				". . ."
-				"content content content"
-				". . .";
-
-			@include mobile-above {
-				grid-template-areas: "header header pic"
-					". . pic"
-					"content content pic"
-					"content content pic"
-					"content content pic"
-					". .  pic";
-			}
-
-			&:has(.page__main-footer) {
-				grid-template-rows: auto #{rem(30)} auto #{rem(30)} auto #{rem(30)} auto 1fr;
-				grid-template-areas: "header header header"
-					". . ."
-					"pic pic ."
-					". . ."
-					"content content content"
-					". . ."
-					"footer footer footer"
-					". . .";
-
-				@include mobile-above {
-					grid-template-areas: "header header pic"
-						". . pic"
-						"content content pic"
-						"content content pic"
-						"content content pic"
-						". . pic"
-						"footer footer pic"
-						". .  pic";
-				}
-			}
-		}
-
-		&-header {
-			grid-area: header;
-
-			&-title {}
-
-			&-content {
-				margin-top: 20px;
-				@include fluid-text(18, 16);
-			}
-		}
-
-		&-content {
-			grid-area: content;
-			@include fluid-text(18, 16);
-		}
-
-		&-footer {
-			grid-area: footer;
-		}
-
-		&-pic {
-			grid-area: pic;
-			justify-self: start;
-
-			@include mobile-above {
-				justify-self: end;
-			}
-		}
-
-		&-img {}
 	}
 
-	&__footer {
-		grid-column: 2;
-		margin-top: #{rem(40)};
-
-		@include tablet-above {
-			grid-column: 2/7;
-			margin-top: #{rem(80)};
-		}
+	&_landing {
+		max-width: calc(var(--container-width) + var(--global-padding-x) * 2);
+		margin-inline: auto;
 	}
 }

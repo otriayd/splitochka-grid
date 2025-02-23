@@ -8,19 +8,19 @@
 		@@include('html/parts/header-w-aside.html')
 		@@include('html/parts/aside.html')
 
-		<main id="main" class="site__main main main_light breakdowns-page page main_near-aside">
-			<div class="page__main page__main_simple">
-				<header class="page__main-header">
-					<h1 class="page__main-header-title title title_h1">Частые поломки кондиционера</h1>
-					<div class="page__main-header-content">
-						<p>Системы кондиционирования состоят из внутреннего и внешнего блока. Внешний блок необходимо
-							разместить в легкой доступности, иначе при установке или ремонте придётся вызывать автовышку.
-							Внутренний блок не должен мешать другим системам комуникаций. </p>
-					</div>
-				</header>
-				<div class="page__main-content page__main-content_column3">
-					<section class="breakdowns-page__breakdowns-container block-container">
-						<div class="breakdowns">
+		<main id="main" class="site__main main">
+			<div class="page breakdowns-page page_narrow">
+				<div class="archive">
+					<header class="archive__header">
+						<h1 class="archive__title title title_h1">Частые поломки кондиционера</h1>
+						<div class="archive__description">
+							<p>Системы кондиционирования состоят из внутреннего и внешнего блока. Внешний блок необходимо
+								разместить в легкой доступности, иначе при установке или ремонте придётся вызывать автовышку.
+								Внутренний блок не должен мешать другим системам комуникаций. </p>
+						</div>
+					</header>
+					<div class="archive__content">
+						<div class="breakdowns-page__breakdowns breakdowns">
 							<div class="breakdowns__search-container search-container">
 								<span class="search-form__label-text">Поиск по разделу "Частые поломки": </span>
 								<form action="/" class="search-container__search-form search-form" method="get">
@@ -190,170 +190,164 @@
 								</a>
 							</div>
 						</div>
-					</section>
-					<section class="breakdowns-page__advantages-container block-container">
-						<div class="advantages advantages_simple">
-							<h2 class="advantages__title title title_h2">
-								Наши преимущества
-							</h2>
-							<ul class="advantages__list">
-								<li class="advantages__list-item">
-									<div class="advantage advantage_w-border">
-										<h3 class="advantage__title title">Бесплатный выезд</h3>
-										<div class="advantage__content">
-											<p>У нас нет фиксированной оплаты только за выезд мастера. Оплачивайте только
-												качествено
-												выполненые
-												работы</p>
-										</div>
-									</div>
-								</li>
-								<li class="advantages__list-item">
-									<div class="advantage advantage_w-border">
-										<h3 class="advantage__title title">Бесплатный выезд</h3>
-										<div class="advantage__content">
-											<p>На все работы наших мастеров есть гарантия. Все неисправности после ремонта
-												устраняются
-												бесплатно</p>
-										</div>
-									</div>
-								</li>
-								<li class="advantages__list-item">
-									<div class="advantage advantage_w-border">
-										<h3 class="advantage__title title">Бесплатная доставка</h3>
-										<div class="advantage__content">
-											<p>Доставка приобретённых у нас товаров по региону КМВ осуществляется бесплатно</p>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</section>
+					</div>
 				</div>
-			</div>
-			<div class="page__footer">
-				<div class="breakdowns-page__workers-container block-container">
-					<div class="workers">
-						<h2 class="workers__title title title_h2">Мастера по ремонту кондиционера в Ессентуках</h2>
-						<div class="workers__choice-city choice-city">
-							<p class="choice-city__title">Выберите мастеров из своего города:</p>
-							<ul class="choice-city__list">
-								<li class="choice-city__item choice-city__item_current">
-									<span class="tag-link">Ессентуки</span>
-								</li>
-								<li class="choice-city__item">
-									<a href="/" class="choice-city__item-link tag-link">Пятигорск</a>
-								</li>
-								<li class="choice-city__item">
-									<a href="/" class="choice-city__item-link tag-link">Кисловодск</a>
-								</li>
-								<li class="choice-city__item">
-									<a href="/" class="choice-city__item-link tag-link">Мин.воды</a>
-								</li>
-							</ul>
-						</div>
-						<ul class="workers__list">
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-1.webp">
-										<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+				<div class="breakdowns-page__advantages advantages advantages_simple">
+					<h2 class="advantages__title title title_h2">
+						Наши преимущества
+					</h2>
+					<ul class="advantages__list">
+						<li class="advantages__list-item">
+							<div class="advantage advantage_w-border">
+								<h3 class="advantage__title title">Бесплатный выезд</h3>
+								<div class="advantage__content">
+									<p>У нас нет фиксированной оплаты только за выезд мастера. Оплачивайте только
+										качествено
+										выполненые
+										работы</p>
+								</div>
+							</div>
+						</li>
+						<li class="advantages__list-item">
+							<div class="advantage advantage_w-border">
+								<h3 class="advantage__title title">Бесплатный выезд</h3>
+								<div class="advantage__content">
+									<p>На все работы наших мастеров есть гарантия. Все неисправности после ремонта
+										устраняются
+										бесплатно</p>
+								</div>
+							</div>
+						</li>
+						<li class="advantages__list-item">
+							<div class="advantage advantage_w-border">
+								<h3 class="advantage__title title">Бесплатная доставка</h3>
+								<div class="advantage__content">
+									<p>Доставка приобретённых у нас товаров по региону КМВ осуществляется бесплатно</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="breakdowns-page__workers workers">
+					<h2 class="workers__title title title_h2">Мастера по ремонту кондиционера в Ессентуках</h2>
+					<div class="workers__choice-city choice-city">
+						<p class="choice-city__title">Выберите мастеров из своего города:</p>
+						<ul class="choice-city__list">
+							<li class="choice-city__item choice-city__item_current">
+								<span class="tag-link">Ессентуки</span>
 							</li>
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-2.webp">
-										<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+							<li class="choice-city__item">
+								<a href="/" class="choice-city__item-link tag-link">Пятигорск</a>
 							</li>
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-3.webp">
-										<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+							<li class="choice-city__item">
+								<a href="/" class="choice-city__item-link tag-link">Кисловодск</a>
 							</li>
-							<li class="workers__item worker">
-								<a href="" class="worker__link">
-									<picture class="worker__pic">
-										<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
-											srcset="@img/workers/worker-4.webp">
-										<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
-											alt="Анимационная фигура" class="worker__img">
-									</picture>
-									<div class="worker__data">
-										<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
-										<h4 class="worker__name title">Иван Семёнов</h4>
-										<div class="worker__rating-result rating-result">
-											<div class="rating-result__list">
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-												<span class="rating-result__item">★</span>
-											</div>
-											23 отзыва
-										</div>
-									</div>
-								</a>
-								<a href="tel:+79054412688" class="worker__phone action-button">+7 905
-									441-26-88</a>
+							<li class="choice-city__item">
+								<a href="/" class="choice-city__item-link tag-link">Мин.воды</a>
 							</li>
 						</ul>
-						<a href="/" class="workers__link link-under">
-							Все мастера в городе Ессентуки
-						</a>
 					</div>
+					<ul class="workers__list">
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-1.webp">
+									<img src="@img/workers/worker-1.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-2.webp">
+									<img src="@img/workers/worker-2.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-3.webp">
+									<img src="@img/workers/worker-3.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+						<li class="workers__item worker">
+							<a href="" class="worker__link">
+								<picture class="worker__pic">
+									<source media="(min-width: 1025px)" type="image/webp" width="249" height="300"
+										srcset="@img/workers/worker-4.webp">
+									<img src="@img/workers/worker-4.webp" loading="lazy" width="249" height="300"
+										alt="Анимационная фигура" class="worker__img">
+								</picture>
+								<div class="worker__data">
+									<h3 class="worker__title title">Мастер по ремонту кондиционеров</h3>
+									<h4 class="worker__name title">Иван Семёнов</h4>
+									<div class="worker__rating-result rating-result">
+										<div class="rating-result__list">
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+											<span class="rating-result__item">★</span>
+										</div>
+										23 отзыва
+									</div>
+								</div>
+							</a>
+							<a href="tel:+79054412688" class="worker__phone action-button">+7 905
+								441-26-88</a>
+						</li>
+					</ul>
+					<a href="/" class="workers__link link-under">
+						Все мастера в городе Ессентуки
+					</a>
 				</div>
 			</div>
 		</main>

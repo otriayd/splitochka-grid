@@ -1,5 +1,6 @@
 .search-container {
 	display: flex;
+	flex-wrap: wrap;
 	row-gap: #{rem(10)};
 	column-gap: 20px;
 	align-items: center;
@@ -45,6 +46,7 @@
 
 	&__field:focus-visible {
 		border: 1px solid var(--hover-color);
+		box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4) inset;
 
 		&::placeholder {
 			color: var(--text-color-minlight);

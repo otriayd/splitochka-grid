@@ -1,34 +1,21 @@
 .additional {
-	display: grid;
-	grid-template-rows: auto #{rem(30)} auto;
-	grid-template-areas: "title"
-		"."
-		"list";
-
 	&__title {
 		grid-area: title;
 		@include fluid-text(18, 18);
-
-		&_light {
-			color: var(--text-color-maxlight);
-		}
+		color: var(--text-color-maxlight);
 	}
 
 	&__list {
-		grid-area: list;
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		align-items: start;
-		gap: #{rem(10)};
-
-		&_light {
-			color: var(--text-color-minlight);
-		}
+		margin-top: #{rem(30)};
+		color: var(--text-color-minlight);
 	}
 
 	&__item {
 		@include fluid-text(16, 16);
+
+		&+& {
+			margin-top: #{rem(10)};
+		}
 	}
 
 	&__item-link {}

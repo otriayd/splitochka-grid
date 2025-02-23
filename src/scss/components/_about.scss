@@ -1,5 +1,4 @@
 .about {
-	container-type: inline-size;
 	display: flex;
 	flex-direction: column;
 	row-gap: 40px;
@@ -47,7 +46,4 @@
 		align-self: start;
 	}
 
-	.button-link {}
-
-	.button-link_w-bg {}
 }

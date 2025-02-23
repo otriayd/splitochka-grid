@@ -1,13 +1,9 @@
 .services-page {
-	&__services-container {}
-
-	&__advantages-container {
-		margin-top: #{rem(60)};
-
-		@include tablet-above {
-			margin-top: #{rem(100)};
-		}
+	&__advantages {
+		margin-top: #{rem(80)};
 	}
 
-	&__workers-container {}
+	&__workers {
+		margin-top: #{rem(80)};
+	}
 }

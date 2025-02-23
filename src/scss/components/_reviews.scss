@@ -1,74 +1,43 @@
 .reviews {
-	display: grid;
-	grid-template-columns: auto 40px 1fr;
-
-	&:has(.reviews__add_active) {
-		grid-template-rows: auto #{rem(40)} auto #{rem(40)} auto;
-		grid-template-areas: "title . button"
-			". . ."
-			"add add add"
-			". . ."
-			"accordion accordion accordion";
-	}
-
-	&:not(:has(.reviews__add_active)) {
-		grid-template-rows: auto auto #{rem(40)} auto;
-		grid-template-areas: "title . button"
-			"add add add"
-			". . ."
-			"accordion accordion accordion";
+	&__header {
+		display: flex;
+		align-items: center;
+		column-gap: 40px;
 	}
 }
 
-.reviews__title {
-	grid-area: title;
-	align-self: center;
-}
+.reviews__title {}
 
 .reviews__button {
-	grid-area: button;
-	justify-self: start;
-	align-self: center;
+	display: flex;
+	align-items: center;
+	padding-inline: 20px;
+	height: #{rem(40)};
+	border-radius: var(--border-radius_min);
+	border: 1px solid var(--border-color-dark);
 }
 
-.reviews__add {
-	grid-area: add;
-}
+.reviews__add {}
 
 .reviews__accordion {
-	grid-area: accordion;
+	margin-top: #{rem(40)};
 }
 
-.rating-area {
-	display: grid;
-	height: 0;
-	width: 0;
-	visibility: hidden;
-	overflow: hidden;
-	grid-template-rows: auto #{rem(10)} auto #{rem(10)} auto;
-	grid-template-areas: "set"
-		"."
-		"area"
-		"."
-		"submit";
+.reviews__form {
+	display: flex;
+	flex-direction: column;
+	margin-top: #{rem(20)};
 }
 
-.reviews__add_active .rating-area {
-	height: auto;
-	width: auto;
-	visibility: visible;
-}
-
-.rating-area__set-area {
-	grid-area: area;
+.reviews-form__area {
+	margin-top: #{rem(10)};
 	border: 1px solid var(--border-color-dark);
 	border-radius: var(--border-radius_mid);
 	padding: 10px;
 	resize: none;
 }
 
-.rating-area__set {
-	grid-area: set;
+.reviews-form__rating {
 	display: flex;
 	align-self: start;
 	position: relative;
@@ -83,9 +52,9 @@
 	}
 }
 
-.rating-area__items {
+.reviews-form__items {
 	position: absolute;
-	width: 100%;
+
 	top: 0;
 	left: 0;
 	display: flex;
@@ -125,16 +94,11 @@
 	color: var(--theme-color) !important;
 }
 
-.rating-area__submit {
-	grid-area: submit;
-	justify-self: start;
+.reviews-form__submit {
+	margin-top: #{rem(10)};
+	align-self: start;
 }
 
-.rating-area__set {
-	grid-area: set;
-	justify-self: start;
-}
+.rating-area__set {}
 
-.rating-area__items {
-	justify-self: start;
-}
+.rating-area__items {}

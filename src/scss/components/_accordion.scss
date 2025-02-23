@@ -1,4 +1,6 @@
 .accordion {
+	max-width: 750px;
+
 	&__item {
 		border-top: 1px solid var(--border-color-dark);
 

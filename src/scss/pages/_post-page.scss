@@ -1,7 +1,9 @@
 .post-page {
-	&__article-navigation {}
+	&__workers {
+		margin-top: #{rem(80)};
+	}
 
 	&__text-list {
-		margin-top: #{rem(50)};
+		margin-top: #{rem(40)};
 	}
 }

@@ -1,9 +1,9 @@
-.error-page__workers-container {
-	margin-top: #{rem(60)};
+.error-page {
+	&__errors {
+		margin-top: #{rem(80)};
+	}
 
-	@include tablet-above {
-		margin-top: #{rem(100)}
+	&__workers {
+		margin-top: #{rem(80)};
 	}
 }
-
-.error-page__errors-container {}

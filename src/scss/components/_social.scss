@@ -1,12 +1,20 @@
 .social {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 15px;
 
 	&__item {
-		&:hover {
+		border: 1px solid transparent;
+		border-radius: 50%;
+
+		@include hover {
+			border: 1px solid var(--bg-light-color);
+			background-color: transparent;
+
 			.icon {
-				filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.2));
+				path {
+					fill: var(--bg-light-color);
+				}
 			}
 		}
 	}

@@ -6,7 +6,7 @@
 	container-type: inline-size;
 	container-name: site;
 	min-height: 100%;
-	max-width: var(--container-width);
+	max-width: var(--site-container-width);
 	margin-inline: auto;
 	display: grid;
 	grid-template-rows: auto 15px auto minmax(120px, 1fr) auto;
@@ -66,4 +66,10 @@
 
 .block-container {
 	container-type: inline-size;
+}
+
+.container {
+	max-width: calc(var(--container-width) + (var(--global-padding-x) * 2));
+	margin: 0 auto;
+	padding-inline: var(--global-padding-x);
 }

@@ -1,11 +1,11 @@
 .text-list {
-	&__list {
-		display: grid;
-		row-gap: #{rem(20)};
+	max-width: 750px;
 
+	&__list {
 		&-item {
-			display: grid;
-			row-gap: #{rem(15)};
+			&+& {
+				margin-top: #{rem(30)};
+			}
 
 			&-title {
 				@include fluid-text(18, 14);
@@ -13,6 +13,7 @@
 			}
 
 			&-content {
+				margin-top: #{rem(15)};
 				@include fluid-text(18, 16);
 			}
 		}
